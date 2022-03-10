@@ -4,7 +4,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'satoshi-regular': "'Satoshi Regular', sans-serif",
+        'satoshi-bold': "'Satoshi Bold', sans-serif",
+      },
+      colors: {
+        black: '#28292e',
+        white: '#fdffff',
+      }
+    },
   },
   plugins: [],
 }

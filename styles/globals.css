@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+@layer base {
+    @font-face {
+        font-family: 'Satoshi Regular';
+        src: url('/fonts/Satoshi-Regular.woff') format('woff'),
+        url('/fonts/Satoshi-Regular.woff2') format('woff2');
+    }
+    @font-face {
+        font-family: 'Satoshi Bold';
+        src: url('/fonts/Satoshi-Bold.woff') format('woff'),
+        url('/fonts/Satoshi-Bold.woff2') format('woff2');
+    }
+}
