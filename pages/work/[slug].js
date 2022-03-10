@@ -14,7 +14,7 @@ export default function Works({ work }) {
 
             </div>
             <div className="bg-white py-12 w-full flex flex-col justify-start items-center px-12">
-                <span className="text-8xl font-satoshi-bold text-center my-20 sm:my-24">{work?.title}</span>
+                <span className="text-7xl sm:text-8xl font-satoshi-bold text-center my-20 sm:my-24">{work?.title}</span>
                 <div className={`py-6 w-1/5 flex items-center mb-24 ${(work?.projectLink && work?.codeLink) ? 'justify-between' : 'justify-center'}`}>
                     {work?.projectLink ? <Link href={work?.projectLink}>
                         <a>
