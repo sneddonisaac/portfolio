@@ -28,7 +28,10 @@ export default function LandingAbout() {
                         <p className="pb-8">
                             {data?.paragraphRight}
                         </p>
-                        {data?.imgUrl && (<img className="pb-8" src={urlFor(data?.imgUrl).url()} />)}
+                        <div className="relative">
+                            {data?.imgUrl && (<img className="pb-8 w-full h-full object-cover" alt={data?.imgUrl.attribution} src={urlFor(data?.imgUrl).url()} />)}
+                            <span className="absolute bottom-0 right-0">{data?.imgUrl.caption}</span>
+                        </div>
                     </div>
                     <div className="col-span-1" />
                 </div>
