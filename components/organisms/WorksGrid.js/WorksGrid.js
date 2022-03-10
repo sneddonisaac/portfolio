@@ -3,7 +3,7 @@ import { urlFor } from "../../../utils/sanity-client";
 
 export default function WorksGrid({ data }) {
     return (
-        <div className="w-full px-10 py-10 lg:max-w-7xl grid grid-cols-2 grid-flow-rows gap-6">
+        <div className="w-full px-10 py-10 lg:max-w-7xl grid grid-cols-1 sm:grid-cols-2 grid-flow-rows gap-6">
             {data?.map((item, index) => (
                 <>
                     <Link href={`/work/${item?.slug.current}`} key={item.id + index}>
