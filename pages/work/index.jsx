@@ -17,7 +17,7 @@ export default function Works() {
   }, [])
 
   return (
-    <Layout>
+    <Layout title="Work">
       <WorkHero data={works} />
     </Layout>
   )

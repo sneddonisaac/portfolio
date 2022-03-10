@@ -15,7 +15,7 @@ export default function Snippets() {
     })
   }, [])
   return (
-    <Layout>
+    <Layout title='Snippets'>
       {snippets?.map((item) => (
         <div>{item.title}</div>
       ))}

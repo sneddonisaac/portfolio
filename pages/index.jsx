@@ -4,7 +4,7 @@ import LandingAbout from '../components/organisms/Abouts/LandingAbout'
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title='Home'>
       <LandingHero />
       <LandingAbout />
     </Layout>
