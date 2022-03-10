@@ -1,10 +1,6 @@
 import { client, urlFor } from "../../utils/sanity-client";
-import { useState, useEffect } from "react";
 import groq from 'groq'
 import Layout from '../../templates/Layout'
-import { useRouter } from "next/router";
-
-import { workQuery, workSlugsQuery } from '../../lib/queries'
 import { CodeIcon, GlobeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
@@ -32,6 +28,7 @@ export default function Works({ work }) {
                     </Link> : ''}
                 </div>
                 <span className="text-center text-lg">{work?.description}</span>
+                {work?.content}
             </div>
         </Layout>
     )
