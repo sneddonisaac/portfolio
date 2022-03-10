@@ -12,7 +12,7 @@ export default function Footer() {
                         </div>
                     </Link> */}
                     <Link href='mailto:hello@isaacsneddonjenkins.co.uk'>
-                        <div className='py-4 px-6 cursor-pointer border border-2 border-white bg-white text-black'>
+                        <div className='py-4 px-6 cursor-pointer border border-2 border-white bg-white text-black hover:bg-black hover:text-white transition-all duration-300 ease-in-out'>
                             Email Me
                         </div>
                     </Link>
