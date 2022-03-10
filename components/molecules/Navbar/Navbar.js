@@ -5,8 +5,8 @@ import { useState } from "react";
 
 const nav = [
     { title: 'Main', path: '/' },
-    { title: 'Work', path: '/work' },
-    { title: 'Snippets', path: '/snippets' },
+    { title: 'Work', path: '/work' },/* 
+    { title: 'Snippets', path: '/snippets' }, */
 ]
 
 export default function Navbar() {

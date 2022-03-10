@@ -1,7 +1,8 @@
 import { client } from '../../utils/sanity-client'
 import { useState, useEffect } from 'react'
 import Layout from '../../templates/Layout'
-import WorkHero from '../../components/organisms/Heros/WorkHero/WorkHero'
+import WorkHero from '../../components/organisms/Heros/WorkHero'
+import WorksGrid from '../../components/organisms/WorksGrid.js/WorksGrid'
 
 export default function Works() {
   const [works, setWorks] = useState([])
@@ -18,7 +19,8 @@ export default function Works() {
 
   return (
     <Layout title="Work">
-      <WorkHero data={works} />
+      <WorkHero />
+      <WorksGrid data={works} />
     </Layout>
   )
 }
