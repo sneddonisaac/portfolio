@@ -14,8 +14,8 @@ export default function WorksGrid({ data }) {
                             </span>
                         </a>
                     </Link>
-                    <div className="w-full md:col-span-1 hidden" />
-                    <div className="w-full md:col-span-1 hidden" />
+                    <div className="w-full md:col-span-1 hidden md:block" />
+                    <div className="w-full md:col-span-1 hidden md:block" />
                 </>
             ))}
         </div>
