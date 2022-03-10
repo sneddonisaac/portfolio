@@ -10,7 +10,7 @@ export default function Works({ work }) {
     return (
         <Layout>
             <div className="h-5/6 pt-24 overflow-clip flex justify-center items-center">
-                <img className="w-5/6 h-auto" src={urlFor(work?.imgUrl)} />
+                <img className="w-5/6 h-auto" src={urlFor(work?.imgUrl) || ''} />
 
             </div>
             <div className="bg-white py-12 w-full flex flex-col justify-start items-center px-12">
