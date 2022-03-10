@@ -9,12 +9,12 @@ export default function Works({ work }) {
 
     return (
         <Layout>
-            <div className="h-5/6 pt-24 overflow-clip flex justify-center items-center">
+            <div className="h-5/6 pt-32 sm:pt-24 overflow-clip flex justify-center items-center">
                 {work?.imgUrl && (<img className="w-5/6 h-auto" src={urlFor(work?.imgUrl).url()} />)}
 
             </div>
             <div className="bg-white py-12 w-full flex flex-col justify-start items-center px-12">
-                <span className="text-8xl font-satoshi-bold text-center my-24">{work?.title}</span>
+                <span className="text-8xl font-satoshi-bold text-center my-20 sm:my-24">{work?.title}</span>
                 <div className={`py-6 w-1/5 flex items-center mb-24 ${(work?.projectLink && work?.codeLink) ? 'justify-between' : 'justify-center'}`}>
                     {work?.projectLink ? <Link href={work?.projectLink}>
                         <a>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { client } from "../../../../utils/sanity-client";
+import { client, urlFor } from "../../../../utils/sanity-client";
 
 export default function LandingAbout() {
     const [about, setAbout] = useState([]);
@@ -28,7 +28,7 @@ export default function LandingAbout() {
                         <p className="pb-8">
                             {data?.paragraphRight}
                         </p>
-                        <img className="pb-8" src="https://cdn.sanity.io/images/7c54tqh6/production/058dfadf27721dea07ba6d4fc462fa9a2b8baa0c-3088x1737.png" />
+                        {data?.imgUrl && (<img className="pb-8" src={urlFor(data?.imgUrl).url()} />)}
                     </div>
                     <div className="col-span-1" />
                 </div>
