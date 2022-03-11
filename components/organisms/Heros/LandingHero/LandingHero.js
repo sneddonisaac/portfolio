@@ -24,7 +24,7 @@ export default function LandingHero() {
             )}
 
             <div className="absolute bottom-5 left-5">
-                <DoubleArrowDownIcon className="h-10 w-10" />
+                <DoubleArrowDownIcon className="h-8 w-8 sm:h-10 sm:w-10" />
             </div>
         </div>
     )
@@ -46,13 +46,18 @@ function WorkItem({ title, description, tags, slug }) {
                         ))}
                     </div>
                     <Link href={`/work/${slug.current}`}>
-                        <a className="underline underline-offset-4 decoration-black decoration-2">
+                        <a className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold hidden sm:block">
                             Learn More
                         </a>
                     </Link>
                 </div>
             </div>
-            <div className="absolute right-5 bottom-5">
+            <div className="absolute right-5 bottom-5 flex flex-col justify-end items-end">
+                <Link href={`/work/${slug.current}`}>
+                    <a className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold sm:hidden">
+                        Learn More
+                    </a>
+                </Link>
                 Featured Work
             </div>
         </div>
