@@ -10,7 +10,7 @@ export default function LandingHero() {
     const [works, setWorks] = useState([]);
 
     useEffect(() => {
-        const query = '*[_type == "works"]';
+        const query = '*[_type == "works" && featured == true]';
 
         client.fetch(query).then((data) => {
             setWorks(data);
