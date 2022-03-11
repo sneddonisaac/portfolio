@@ -4,14 +4,23 @@ import Layout from '../../templates/Layout'
 import { CodeIcon, GlobeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import markdownToHtml from "../../lib/markdownToHTML";
+import WorkPageContent from "../../components/organisms/Content/WorkPageContent/WorkPageContent";
 
 export default function Works({ work }) {
     const [links, setLinks] = useState(false)
+    const [content, setContent] = useState(null)
 
     useEffect(() => {
         if (work?.projectLink || work?.codeLink) setLinks(true)
     }, [])
 
+    useEffect(() => {
+        async function reformattedContent() {
+            setContent(await markdownToHtml(work?.content))
+        }
+        reformattedContent();
+    }, [work?.content])
 
     return (
         <Layout>
@@ -36,7 +45,7 @@ export default function Works({ work }) {
                     </Link> : ''}
                 </div>
                 <span className="text-center text-lg">{work?.description}</span>
-                {work?.content}
+                <WorkPageContent details={content} />
             </div>
         </Layout>
     )
@@ -48,7 +57,8 @@ const query = groq`
         description,
         imgUrl,
         projectLink,
-        codeLink
+        codeLink,
+        content
     }
 `
 
