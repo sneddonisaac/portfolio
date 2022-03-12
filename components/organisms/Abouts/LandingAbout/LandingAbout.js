@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { client, urlFor } from "../../../../utils/sanity-client";
+import { motion } from 'framer-motion'
 
 export default function LandingAbout() {
     const [about, setAbout] = useState([]);
@@ -28,10 +29,15 @@ export default function LandingAbout() {
                         <p className="pb-8">
                             {data?.paragraphRight}
                         </p>
-                        <div className="relative">
+                        <motion.div 
+                            className="relative overflow-hidden"
+                            initial={{ x: '100%' }}
+                            whileInView={{ translateX: '-100%' }}
+                            transition={{ duration: 0.5, ease: 'easeInOut' }}
+                        >
                             {data?.imgUrl && (<img className="pb-8 w-full h-full object-cover" alt={data?.imgUrl.attribution} src={urlFor(data?.imgUrl).url()} />)}
                             <span className="absolute bottom-0 right-0">{data?.imgUrl.caption}</span>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="col-span-1" />
                 </div>
