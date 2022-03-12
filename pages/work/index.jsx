@@ -3,24 +3,50 @@ import { useState, useEffect } from 'react'
 import Layout from '../../templates/Layout'
 import WorkHero from '../../components/organisms/Heros/WorkHero'
 import WorksGrid from '../../components/organisms/Grids/WorksGrid'
+import Loading from '../../components/atoms/Loading'
 
 export default function Works() {
   const [works, setWorks] = useState([])
   const [filterWork, setFilterWork] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [progressValue, setProgressValue] = useState(0)
 
   useEffect(() => {
-    const query = '*[_type == "works"]'
+    setTimeout(() => {
+      setProgressValue(progressValue + 10)
+    }, 100)
+  }, [progressValue])
 
-    client.fetch(query).then((data) => {
-      setWorks(data)
-      setFilterWork(data)
-    })
+  useEffect(() => {
+    try {
+      setTimeout(() => {
+        setLoading(true)
+      }, 1000)
+
+      const query = '*[_type == "works"]'
+
+      client.fetch(query).then((data) => {
+        setWorks(data)
+        setFilterWork(data)
+      })
+    } catch (error) {
+      setLoading(false)
+      alert(error.message)
+    }
   }, [])
 
   return (
-    <Layout title="Work">
-      <WorkHero />
-      <WorksGrid data={works} />
-    </Layout>
+    <>
+      {loading ? (
+        <>
+          <Layout title="Work">
+            <WorkHero />
+            <WorksGrid data={works} />
+          </Layout>
+        </>
+      ) : (
+        <Loading value={progressValue} />
+      )}
+    </>
   )
 }

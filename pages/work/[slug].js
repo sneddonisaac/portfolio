@@ -8,8 +8,9 @@ import markdownToHtml from "../../lib/markdownToHTML";
 import WorkPageContent from "../../components/organisms/Content/WorkPageContent/WorkPageContent";
 
 export default function Works({ work }) {
-    const [links, setLinks] = useState(false)
-    const [content, setContent] = useState(null)
+    const [links, setLinks] = useState(false);
+    const [content, setContent] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         if (work?.projectLink || work?.codeLink) setLinks(true)
