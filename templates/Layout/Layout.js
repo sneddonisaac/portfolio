@@ -8,7 +8,7 @@ import CustomCursor from '../../components/atoms/CustomCursor'
 export default function Layout({ children, title }) {
     return (
         <div className='relative font-satoshi-regular text-black bg-white'>
-            <CustomCursor />
+            {/* <CustomCursor /> */}
             <Meta title={title} />
             <Navbar />
             {children}

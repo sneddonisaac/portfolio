@@ -14,8 +14,7 @@ export default function WorksGrid({ data }) {
                         className="w-full col-span-1 relative group overflow-hidden"
                     >
                         <motion.div
-                            initial={{ y: '-100%' }}
-                            whileInView={{ y: '0%' }}
+                            whileInView={{ y: ['-100%', '0%'] }}
                             transition={{ duration: 1, ease: 'easeInOut' }}
                         >
                             <Link href={`/work/${item?.slug.current}`}>

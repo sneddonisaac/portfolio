@@ -13,8 +13,8 @@ export default function Works() {
 
   useEffect(() => {
     setTimeout(() => {
-      setProgressValue(progressValue + 10)
-    }, 100)
+      setProgressValue(progressValue + 1)
+    }, 10)
   }, [progressValue])
 
   useEffect(() => {
