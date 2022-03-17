@@ -7,14 +7,19 @@ export default function Footer() {
                 <span className='text-5xl font-satoshi-bold mb-6 sm:mb-0'>Get in touch.</span>
                 <div className='flex flex-col justify-center items-center sm:flex-row'>
                     {/* <Link href='/contact-me'>
-                        <div className='py-4 px-6 sm:mr-6 mb-6 sm:mb-0 cursor-pointer border border-2 border-white'>
+                        <div className='py-4 px-6  mb-6 sm:mb-0 cursor-pointer border border-2 border-white'>
                             Contact Me
                         </div>
                     </Link> */}
                     <Link href='mailto:hello@isaacsneddonjenkins.co.uk'>
-                        <div className='py-4 px-6 cursor-pointer border border-2 border-white bg-white text-black hover:bg-black hover:text-white transition-all duration-300 ease-in-out'>
+                        <a className='py-4 px-6 sm:mr-6 cursor-pointer border border-2 border-white bg-white text-black hover:bg-black hover:text-white transition-all duration-300 ease-in-out'>
                             Email Me
-                        </div>
+                        </a>
+                    </Link>
+                    <Link href='https://www.buymeacoffee.com/sneddonisaac'>
+                        <a target='_blank' rel='noopener noreferrer' className='py-4 px-6 cursor-pointer border border-2 border-white bg-black text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out'>
+                            Buy Me A Coffee
+                        </a>
                     </Link>
                 </div>
             </div>
