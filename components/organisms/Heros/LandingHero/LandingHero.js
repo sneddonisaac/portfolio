@@ -1,28 +1,12 @@
 import { DoubleArrowDownIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
-import { client } from '../../../../utils/sanity-client'
-
-let count = 0;
-let slideInterval;
-export default function LandingHero() {
-    const [works, setWorks] = useState([]);
-
-    useEffect(() => {
-        const query = '*[_type == "works" && featured == true]';
-
-        client.fetch(query).then((data) => {
-            setWorks(data);
-        });
-    }, []);
-
+export default function LandingHero({ data }) {
     return (
         <div className="h-screen w-full relative flex justify-end items-end sm:items-start">
-            {works[0] && (
-                <WorkItem title={works[0].title} slug={works[0].slug} description={works[0].description} tags={works[0].tags} />
+            {data && (
+                <WorkItem title={data.title} slug={data.slug} description={data.description} projectTags={data.projectTags} />
             )}
-
             <div className="absolute bottom-5 left-5">
                 <DoubleArrowDownIcon className="h-8 w-8 sm:h-10 sm:w-10" />
             </div>
@@ -30,7 +14,7 @@ export default function LandingHero() {
     )
 }
 
-function WorkItem({ title, description, tags, slug }) {
+function WorkItem({ title, description, projectTags, slug }) {
 
     return (
         <div className="lg:w-4/5 w-full sm:h-5/6 h-full relative bg-black bg-opacity-10 z-0 flex justify-center sm:justify-start items-end">
@@ -41,19 +25,19 @@ function WorkItem({ title, description, tags, slug }) {
                 </span>
                 <div className="font-satoshi-bold tracking-wider w-full flex justify-between items-center">
                     <div>
-                        {tags?.map((tag, i) => (
+                        {projectTags?.map((tag, i) => (
                             <span key={i} className='pr-2'>{tag}</span>
                         ))}
                     </div>
-                    <Link href={`/work/${slug.current}`}>
-                        <a id="link" className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold hidden lg:block">
+                    <Link href={`/work/${slug}`}>
+                        <a id="link" className="whitespace-nowrap underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold hidden lg:block">
                             Learn More
                         </a>
                     </Link>
                 </div>
             </div>
             <div className="absolute right-5 bottom-5 flex flex-col justify-end items-end">
-                <Link href={`/work/${slug.current}`}>
+                <Link href={`/work/${slug}`}>
                     <a className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold sm:hidden">
                         Learn More
                     </a>
