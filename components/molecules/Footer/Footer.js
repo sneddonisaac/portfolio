@@ -17,7 +17,7 @@ export default function Footer() {
                         </a>
                     </Link>
                     <Link href='https://www.buymeacoffee.com/sneddonisaac'>
-                        <a target='_blank' rel='noopener noreferrer' className='py-4 px-6 cursor-pointer border border-2 border-white bg-black text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out'>
+                        <a target='_blank' rel='noopener noreferrer' className='py-4 px-6 cursor-pointer border border-2 mt-4 sm:mt-0 border-white bg-black text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out'>
                             Buy Me A Coffee
                         </a>
                     </Link>
