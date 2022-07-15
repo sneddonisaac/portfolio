@@ -46,7 +46,7 @@ function WorkItem({ title, description, tags, slug }) {
                         ))}
                     </div>
                     <Link href={`/work/${slug.current}`}>
-                        <a id="link" className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold hidden sm:block">
+                        <a id="link" className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold hidden lg:block">
                             Learn More
                         </a>
                     </Link>
