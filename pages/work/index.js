@@ -3,7 +3,7 @@ import { allWorkPages } from '../../lib/API'
 
 // UI
 import Layout from '../../templates/Layout'
-import WorkHero from '../../components/organisms/Heros/WorkHero'
+import BasicHero from '../../components/organisms/Heros/BasicHero'
 import WorksGrid from '../../components/organisms/Grids/WorksGrid'
 
 export async function getStaticProps() {
@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function Works({ works }) {
   return (
     <Layout title="Work">
-      <WorkHero />
+      <BasicHero title="Previous Work." />
       <WorksGrid data={works} />
     </Layout>
   )

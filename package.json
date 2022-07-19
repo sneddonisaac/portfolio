@@ -10,6 +10,7 @@
     "@radix-ui/react-progress": "^0.1.4",
     "@sanity/client": "^3.2.0",
     "@sanity/image-url": "^1.0.1",
+    "clsx": "^1.2.1",
     "framer-motion": "^6.2.8",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
