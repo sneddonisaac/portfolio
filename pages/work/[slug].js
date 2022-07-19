@@ -9,7 +9,7 @@ export default function Works({ work }) {
         <Layout>
             <ProjectHero data={work} />
             {work?.content ? (
-                work?.content?.map((component, index) => (
+                work.content.map((component, index) => (
                     <Components data={component} key={index} />
                 ))
             ) : (
@@ -17,7 +17,7 @@ export default function Works({ work }) {
                     <h1>Sorry there doesn't see be any notes on this project yet</h1>
                 </div>
             )}
-            {work.projectLink && <ProjectButtons data={work.projectLink} />}
+            {work?.projectLink && <ProjectButtons data={work.projectLink} />}
         </Layout>
     )
 }
