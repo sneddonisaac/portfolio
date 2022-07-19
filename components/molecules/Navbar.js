@@ -13,7 +13,7 @@ export default function Navbar() {
     const router = useRouter();
 
     return (
-        <div className="font-satoshi-regular fixed bg-transparent w-full h-fit z-[120]">
+        <div id="Navbar" className="font-satoshi-regular fixed bg-transparent w-full h-fit z-[120]">
             <div className="font-satoshi-bold text-5xl pt-12 px-5 sm:px-20 flex justify-between items-center">
                 <Link href="/">
                     <a>

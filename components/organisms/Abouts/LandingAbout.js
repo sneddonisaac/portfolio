@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import Img from '../../../molecules/Img'
+import Img from '../../molecules/Img'
 
 export default function LandingAbout({ data }) {
     return (
-        <div className="h-fit w-full flex justify-end items-start">
+        <div className="h-fit w-full flex justify-end items-start py-8">
             <div className="lg:w-5/6 w-full px-12 py-12 md:py-4 md:px-4 h-3/4 mt-20 columns-1 sm:columns-2 gap-10">
                 <div className="h-full w-full relative flex flex-col md:justify-between items-center md:items-start">
                     <div className="lg:-rotate-90 lg:absolute lg:-left-32 lg:top-10 text-4xl lg:pr-6 pb-6 font-satoshi-bold">{data?.title}</div>

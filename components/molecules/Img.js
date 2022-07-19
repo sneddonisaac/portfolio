@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function Img({ data, styles }) {
     return (
-        <div className={"relative overflow-hidden " + styles}>
-            <div className='pb-6'>
+        <div id='ImgCaptionComponent' className={"relative overflow-hidden w-full h-full " + styles}>
+            <div className={`object-cover object-center w-full h-full ${data.caption && 'pb-6'}`}>
                 <Image
-                    className="object-cover"
+                    className="object-cover object-center"
                     alt={data?.altText}
                     src={data?.image.url}
                     width={data?.image.width}
