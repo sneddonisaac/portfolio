@@ -7,7 +7,7 @@ export default function Works({ work }) {
     return (
         <Layout>
             <ProjectHero data={work} />
-            {work.content.map((component, index) => (
+            {work?.content?.map((component, index) => (
                 <Components data={component} key={index} />
             ))}
         </Layout>
