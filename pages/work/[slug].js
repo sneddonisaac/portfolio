@@ -17,17 +17,16 @@ export default function Works({ work }) {
                     <h1>Sorry there doesn't see be any notes on this project yet</h1>
                 </div>
             )}
-            <ProjectButtons data={work.projectLink} />
+            {work.projectLink && <ProjectButtons data={work.projectLink} />}
         </Layout>
     )
 }
 
 function ProjectButtons({ data }) {
-    console.log("🚀 ~ file: [slug].js ~ line 25 ~ ProjectButtons ~ data", data)
     return (
         <div className='fixed right-8 bottom-16'>
             <Link href={data}>
-                <a className='py-6 px-14 rounded-full border-2 border-black bg-black text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 ease-in-out'>
+                <a className='px-10 py-6 sm:px-14 rounded-full border-2 border-black bg-black text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 ease-in-out'>
                     Visit Site
                 </a>
             </Link>

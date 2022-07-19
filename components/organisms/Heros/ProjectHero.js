@@ -5,7 +5,7 @@ export default function ProjectHero({ data }) {
         <div id="ProjectHero">
             <div className="h-5/6 pt-36 sm:pt-24 overflow-clip flex justify-center items-center">
                 {data?.projectImage?.image ?
-                    <div className='w-5/6 h-auto'>
+                    <div className='md:w-5/6 h-auto'>
                         <Img data={data?.projectImage} />
                     </div>
                     :
