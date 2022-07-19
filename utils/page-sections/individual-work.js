@@ -3,9 +3,7 @@ import DecreasingImageGrid from "../../components/organisms/Grids/DecreasingImag
 export default function Components({ data }) {
     if (data.__typename === 'DecreasingImageGrid') {
         return <DecreasingImageGrid data={data} />;
-    } else if (!data) {
-        return <div><h1>Sorry no data found here...</h1></div>
     } else {
-        return <div className="text-red-500">THIS AIN'T WORKING</div>
+        return <div className="w-full flex justify-center items-center py-8 text-center">Sorry, this project doesn't seem to have any notes right now</div>
     }
 }

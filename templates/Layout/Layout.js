@@ -7,7 +7,9 @@ export default function Layout({ children, title }) {
         <div className='relative font-satoshi-regular text-black bg-white'>
             <Meta title={title} />
             <Navbar />
-            {children}
+            <div className='relative'>
+                {children}
+            </div>
             <Footer />
         </div>
     )
