@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'satoshi-regular': "'Satoshi Regular', sans-serif",
+        'satoshi-medium': "'Satoshi Medium', sans-serif",
         'satoshi-bold': "'Satoshi Bold', sans-serif",
       },
       colors: {

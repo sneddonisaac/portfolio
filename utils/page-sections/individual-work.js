@@ -1,9 +1,13 @@
+import TripleMobileMockup from "../../components/organisms/Content/TripleMobileMockup";
 import DecreasingImageGrid from "../../components/organisms/Grids/DecreasingImageGrid";
+import Simple5050 from "../../components/organisms/Headers/Simple5050";
 
 export default function Components({ data }) {
     if (data.__typename === 'DecreasingImageGrid') {
         return <DecreasingImageGrid data={data} />;
-    } else {
-        return <div className="w-full flex justify-center items-center py-8 text-center">Sorry, this project doesn't seem to have any notes right now</div>
+    } else if (data.__typename === 'Simple5050Header') {
+        return <Simple5050 data={data} />;
+    } else if (data.__typename === 'TripleMobileMockup') {
+        return <TripleMobileMockup data={data} />;
     }
 }

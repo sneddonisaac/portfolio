@@ -18,7 +18,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({page, works}) {
-  console.log("🚀 ~ file: index.js ~ line 21 ~ Home ~ page", page)
   return (
     <Layout title={page.title}>
       <LandingHero data={works[0]} />
