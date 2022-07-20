@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
-import Img from '../../molecules/Img'
+
+// UI
+import ImageWithCaption from "../../atoms/assets/ImageWithCaption"
 
 export default function LandingAbout({ data }) {
     return (
@@ -11,14 +13,14 @@ export default function LandingAbout({ data }) {
                         {data?.paragraph}
                     </p>
                 </div>
-                {data?.image?.image.url && (
+                {data?.image.url && (
                     <motion.div
                         className="relative overflow-hidden"
                         initial={{ x: '100%' }}
                         whileInView={{ translateX: '-100%' }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <Img data={data?.image} />
+                        <ImageWithCaption data={data?.image} />
                     </motion.div>
                 )}
             </div>
