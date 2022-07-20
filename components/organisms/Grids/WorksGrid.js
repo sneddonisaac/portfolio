@@ -1,6 +1,6 @@
+// Libs
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Img from '../../molecules/Img';
 
 export default function WorksGrid({ data }) {
     return (
@@ -26,9 +26,9 @@ function Card({ item }) {
             <Link href={`/work/${item?.slug}`}>
                 <a>
                     {item.projectImage?.image ?
-                        <Img styles="shadow-sm mb-2 sm:mb-0 w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out" data={item.projectImage} />
+                        <img src={item.projectImage.image.url} className="shadow-sm w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out h-full" />
                         :
-                        <img className="shadow-sm mb-2 sm:mb-0 w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out" src="https://media.graphassets.com/RvMwK0BcSQaATVrGnbdF" />
+                        <img className="shadow-sm w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out" src="https://media.graphassets.com/RvMwK0BcSQaATVrGnbdF" />
                     }
                     <span className="md:absolute md:inset-0 md:m-auto w-fit h-fit py-1 md:py-3 px-0 md:px-4 text-center md:bg-black md:text-white flex justify-center items-center">
                         {item?.title}

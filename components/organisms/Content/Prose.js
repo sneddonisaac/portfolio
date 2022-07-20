@@ -1,4 +1,4 @@
-export default function WorkPageContent({ details }) {
+export default function Prose({ details }) {
     return (
         <div className='w-full'>
             <div

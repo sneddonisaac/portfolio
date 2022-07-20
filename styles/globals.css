@@ -15,6 +15,11 @@ body, html {
         url('/fonts/Satoshi-Regular.woff2') format('woff2');
     }
     @font-face {
+        font-family: 'Satoshi Medium';
+        src: url('/fonts/Satoshi-Medium.woff') format('woff'),
+        url('/fonts/Satoshi-Medium.woff2') format('woff2');
+    }
+    @font-face {
         font-family: 'Satoshi Bold';
         src: url('/fonts/Satoshi-Bold.woff') format('woff'),
         url('/fonts/Satoshi-Bold.woff2') format('woff2');

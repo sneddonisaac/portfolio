@@ -6,7 +6,7 @@ import Container from "../../atoms/Container";
 
 export default function DecreasingImageGrid({ data }) {
     return (
-        <div id={data.__typename}>
+        <div id={`block_name: ${data?.__typename}, block_id: ${data?.id}`}>
             <Container>
                 <div className={clsx(data.thinWideImage ? 
                         'lg:grid-rows-5' : 'lg:grid-rows-4', 
@@ -24,7 +24,7 @@ export default function DecreasingImageGrid({ data }) {
 
 function Img({ data, styles }) {
     return (
-        <div className={`${styles} h-full w-full overflow-clip border-2 md:border-0`}>
+        <div id={data?.id} className={`${styles} h-full w-full overflow-clip border-2 md:border-0`}>
             <img className="lg:object-contain object-cover object-center h-full" src={data.url} width={data.width} height={data.height} alt={data.fileName} />
         </div>
     )
