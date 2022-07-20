@@ -1,8 +1,13 @@
-import Layout from '../../templates/Layout'
-import { allWorkPages, getWorkBySlug } from "../../lib/API";
-import Components from '../../utils/page-sections/individual-work';
-import ProjectHero from '../../components/organisms/Heros/ProjectHero';
+// Libs
 import Link from 'next/link';
+
+// Data
+import Components from '../../utils/page-sections/individual-work';
+import { allWorkPages, getWorkBySlug } from "../../lib/API";
+
+// UI
+import Layout from '../../templates/Layout'
+import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 
 export default function Works({ work }) {
     return (
