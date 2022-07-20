@@ -45,7 +45,7 @@ function FeaturedVideo({video}) {
     return (
         <div id={`FeaturedVideo: Video`} className="absolute w-[90%] h-[98%] z-0">
             {video && 
-                <video className="object-cover object-center h-full overflow-clip rounded-[10%/5%]" loop muted autoPlay controls=''>
+                <video className="object-cover object-center h-full overflow-clip rounded-[10%/5%]" loop muted autoPlay>
                     <source src={video.url} alt={video.fileName} />
                 </video>
             }
