@@ -6,10 +6,10 @@ export default function Img({ data, styles }) {
             <div className={`object-cover object-center w-full h-full ${data.caption && 'pb-6'}`}>
                 <Image
                     className="object-cover object-center"
-                    alt={data?.altText}
-                    src={data?.image.url}
-                    width={data?.image.width}
-                    height={data?.image.height}
+                    alt={data?.alt}
+                    src={data?.url}
+                    width={data?.width}
+                    height={data?.height}
                 />
             </div>
             {data?.caption && <span className="absolute bottom-0 right-0">{data.caption}</span>}

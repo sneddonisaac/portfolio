@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+// UI
+import BasicImage from "../../atoms/assets/BasicImage"
+
 export default function WorksGrid({ data }) {
     return (
         <div className="w-full mx-auto px-10 py-10 lg:max-w-7xl grid grid-cols-1 sm:grid-cols-2 grid-flow-rows gap-6">
@@ -17,6 +20,7 @@ export default function WorksGrid({ data }) {
 }
 
 function Card({ item }) {
+    console.log("🚀 ~ file: WorksGrid.js ~ line 24 ~ Card ~ item", item)
     return (
         <motion.div
             whileInView={{ opacity: [0, 1] }}
@@ -25,8 +29,8 @@ function Card({ item }) {
         >
             <Link href={`/work/${item?.slug}`}>
                 <a>
-                    {item.projectImage?.image ?
-                        <img src={item.projectImage.image.url} className="shadow-sm w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out h-full" />
+                    {item.projectImage ?
+                        <BasicImage data={item?.projectImage} className="shadow-sm w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out h-full" />
                         :
                         <img className="shadow-sm w-full object-cover border-2 border-black group-hover:scale-105 transition-all duration-300 ease-in-out" src="https://media.graphassets.com/RvMwK0BcSQaATVrGnbdF" />
                     }
