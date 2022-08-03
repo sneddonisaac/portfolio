@@ -11,7 +11,7 @@ import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 
 export default function Works({ work }) {
     return (
-        <Layout>
+        <Layout title={work?.title}>
             <ProjectHero data={work} />
             {work?.content ?
                 work.content.map((component, index) => (
