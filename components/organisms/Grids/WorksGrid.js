@@ -10,7 +10,7 @@ export default function WorksGrid({ data }) {
         <div className="w-full mx-auto px-10 py-10 lg:max-w-7xl grid grid-cols-1 sm:grid-cols-2 grid-flow-rows gap-6">
             {data?.map((item, index) => (
                 <>
-                    <Card item={item} key={index} />
+                    <Card item={item} key={index + item?.id} />
                     <div className="w-full md:col-span-1 hidden md:block" role='none' />
                     <div className="w-full md:col-span-1 hidden md:block" role='none' />
                 </>
@@ -20,7 +20,6 @@ export default function WorksGrid({ data }) {
 }
 
 function Card({ item }) {
-    console.log("🚀 ~ file: WorksGrid.js ~ line 24 ~ Card ~ item", item)
     return (
         <motion.div
             whileInView={{ opacity: [0, 1] }}

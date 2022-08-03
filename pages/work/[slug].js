@@ -10,7 +10,6 @@ import Layout from '../../templates/Layout'
 import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 
 export default function Works({ work }) {
-    console.log("🚀 ~ file: [slug].js ~ line 13 ~ Works ~ work", work)
     return (
         <Layout title={work?.title}>
             <ProjectHero data={work} />
