@@ -10,8 +10,9 @@ import Layout from '../../templates/Layout'
 import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 
 export default function Works({ work }) {
+    console.log("🚀 ~ file: [slug].js ~ line 13 ~ Works ~ work", work)
     return (
-        <Layout>
+        <Layout title={work.title}>
             <ProjectHero data={work} />
             {work?.content ?
                 work.content.map((component, index) => (
