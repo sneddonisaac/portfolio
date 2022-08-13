@@ -24,8 +24,8 @@ export default function DecreasingImageGrid({ data }) {
 
 function Img({ data, styles }) {
     return (
-        <div id={data?.id} className={`${styles} h-full w-full overflow-clip border-2 md:border-0`}>
+        <picture id={data?.id} className={`${styles} h-full w-full overflow-clip border-2 md:border-0`}>
             <img className="lg:object-contain object-cover object-center h-full" src={data.url} width={data.width} height={data.height} alt={data.fileName} />
-        </div>
+        </picture>
     )
 }

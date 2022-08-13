@@ -14,8 +14,8 @@ export default function Snippets() {
   }, [])
   return (
     <Layout title='Snippets'>
-      {snippets?.map((item) => (
-        <div>{item.title}</div>
+      {snippets?.map((item, index) => (
+        <div key={index}>{item.title}</div>
       ))}
       <div className='h-screen' />
     </Layout>
