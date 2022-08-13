@@ -24,11 +24,11 @@ function Mockup({ data }) {
 }
 
 function DeviceImage({ data }) {
+    console.log(data)
     return (
         <div id="DeviceImage" className="w-fit absolute h-full flex justify-center items-center">
-            {data.isItAVideo ? <FeaturedVideo video={data.video} /> : <FeaturedImage image={data.image} />}
-            
-            <img className="object-cover object-center h-full overflow-hidden z-10" src="/device-iphone13-nonotch.png" />
+            {data.video ? <FeaturedVideo video={data.video} /> : <FeaturedImage image={data.image} />}
+            <img className="object-cover object-center h-full overflow-hidden z-10" src="/device-iphone13-nonotch.png"  alt='iphone 13 no notch' />
         </div>
     )
 }
@@ -46,7 +46,7 @@ function FeaturedVideo({video}) {
         <div id={`FeaturedVideo: Video`} className="absolute w-[90%] h-[98%] z-0">
             {video && 
                 <video className="object-cover object-center h-full overflow-clip rounded-[10%/5%]" loop muted autoPlay>
-                    <source src={video.url} alt={video.fileName} />
+                    <source src={video.url} />
                 </video>
             }
         </div>
