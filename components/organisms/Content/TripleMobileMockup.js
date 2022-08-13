@@ -24,7 +24,6 @@ function Mockup({ data }) {
 }
 
 function DeviceImage({ data }) {
-    console.log(data)
     return (
         <div id="DeviceImage" className="w-fit absolute h-full flex justify-center items-center">
             {data.video ? <FeaturedVideo video={data.video} /> : <FeaturedImage image={data.image} />}

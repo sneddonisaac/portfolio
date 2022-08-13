@@ -1,5 +1,5 @@
 // Data
-import { allWorkPages } from '../../lib/API'
+import {allWorkPages} from '../../lib/API'
 
 // UI
 import Layout from '../../templates/Layout'
