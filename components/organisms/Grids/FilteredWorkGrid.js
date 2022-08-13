@@ -15,7 +15,7 @@ export default function FilteredWorkGrid({data}) {
     let state = false;
 
     if (data.length % 2 === 0) {
-        state
+        return state;
     } else {
         state = true
     }
