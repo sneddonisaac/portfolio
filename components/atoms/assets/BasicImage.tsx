@@ -5,15 +5,17 @@ type Props = {
     data: ImageTypes
 }
 
-export default function BasicImage({ data, className }: Props) {
+export default function BasicImage({data, className}: Props) {
     return (
-        <img
-            className={className}
-            src={data.url}
-            alt={data.alt}
-            width={data.width}
-            height={data.height}
-            id={data.id}
-        />
+        <picture>
+            <img
+                className={className}
+                src={data.url}
+                alt={data.alt}
+                width={data.width}
+                height={data.height}
+                id={data.id}
+            />
+        </picture>
     )
 }

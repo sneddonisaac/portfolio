@@ -19,7 +19,7 @@ export default function Works({ work }) {
                 ))
                 :
                 <div className='w-full flex justify-center items-center'>
-                    <h1>Sorry there doesn't seem to be any notes on this project yet</h1>
+                    <h1>Sorry there doesn&apos;t seem to be any notes on this project yet</h1>
                 </div>
             }
             {work?.projectLink && <ProjectButtons data={work.projectLink} />}
