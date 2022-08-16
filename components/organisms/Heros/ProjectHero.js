@@ -20,11 +20,11 @@ export default function ProjectHero({data}) {
                     <div className='grid grid-rows-3 md:grid-cols-3 md:grid-rows-1'>
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Client</h1>
-                            <span>{data.client}</span>
+                            <span>{data?.client}</span>
                         </div>
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Services</h1>
-                            {data.projectType.map((type, index) => (
+                            {data?.projectType.map((type, index) => (
                                 <span className='text-lg text-black' key={index}>
                                 {projectTypeConverter(type).title}
                             </span>
@@ -32,14 +32,14 @@ export default function ProjectHero({data}) {
                         </div>
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Links</h1>
-                            {data.codeLink &&
+                            {data?.codeLink &&
                                 <Link href={data.codeLink}>
                                     <a className='text-lg text-black after:content-["_↗"]'>
                                         Code
                                     </a>
                                 </Link>
                             }
-                            {data.projectLink &&
+                            {data?.projectLink &&
                                 <Link href={data.projectLink}>
                                     <a className='text-lg text-black after:content-["_↗"]'>
                                         Site
