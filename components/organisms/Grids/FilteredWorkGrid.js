@@ -1,17 +1,18 @@
-// Libs
-import Link from "next/link";
+// Libs/Utils
+import projectTypeConverter from "../../../utils/projectTypeConverter";
 
 // External
+import {useEffect, useState} from "react";
 import {motion} from "framer-motion";
+import Link from "next/link";
+import clsx from "clsx";
 
 // UI
 import BasicImage from "../../atoms/assets/BasicImage"
-import projectTypeConverter from "../../../utils/projectTypeConverter";
-import {useState} from "react";
-import clsx from "clsx";
 
 export default function FilteredWorkGrid({data}) {
-    const [value, setValue] = useState(null)
+    const [value, setValue] = useState('all')
+    const [filteredData, setFilteredData] = useState(data)
     let state = false;
 
     if (data.length % 2 === 0) {
@@ -20,12 +21,21 @@ export default function FilteredWorkGrid({data}) {
         state = true
     }
 
+    useEffect(() => {
+        console.log('test fired', value)
+        if (value === 'all') {
+            setFilteredData(data)
+        } else {
+            setFilteredData(data.filter(filter => filter.projectType[0] === value))
+        }
+    }, [value])
+
     return (
         <div className='max-w-[92vw] mx-auto'>
-            <Header props={data} value={value} setValue={() => setValue()} />
+            <Header props={data} value={value} projects={filteredData} setValue={setValue}/>
             <div
-                className="w-full h-full mx-auto py-10 lg:max-w-7xl grid grid-cols-1 sm:grid-cols-2 grid-flow-row auto-rows-fr">
-                {data?.map((item, index) => (
+                className="w-full h-full mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 grid-flow-row auto-rows-fr">
+                {filteredData?.map((item, index) => (
                     <Card item={item} index={state} key={index}/>
                 ))}
             </div>
@@ -47,10 +57,10 @@ function Card({item, index}) {
                 <a className={clsx('w-full h-full flex flex-col', !item?.projectImage ? 'justify-end items-end' : 'justify-center items-center')}>
                     {item.projectImage ?
                         <>
-                            <BasicImage data={item?.projectImage} className="w-full object-cover h-full"/>
+                            <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-video"/>
                         </>
                         :
-                        <span className='w-full h-full flex justify-center items-center'>No Image Avaliable</span>
+                        <span className='w-full h-full flex justify-center items-center aspect-video'>No Image Avaliable</span>
                     }
                     <CardDetails {...item} />
                 </a>
@@ -76,9 +86,9 @@ function CardDetails(props) {
     )
 }
 
-function Header({props, value, setValue}) {
+function Header({props, projects, value, setValue}) {
     let types = [];
-    let options = [];
+    let options = [{title: 'All', slug: 'all'}];
 
     props.forEach((item) => {
         types.push(item.projectType[0])
@@ -89,13 +99,15 @@ function Header({props, value, setValue}) {
         options.push(projectTypeConverter(type))
     })
 
-    console.log(value)
+    useEffect(() => {
+        setValue(options[0].slug)
+    }, [])
 
     return (
         <header className='pt-36 flex justify-between items-end'>
             <div className='relative w-min'>
                 <h1 className='block text-8xl font-satoshi-bold'>Work</h1>
-                <span className='absolute top-0 -right-3 text-lg'>{props.length}</span>
+                <span className='absolute top-0 -right-3 text-lg'>{projects.length}</span>
             </div>
             <select value={value} onChange={(e) => setValue(e.target.value)}>
                 {options.map((option, index) => (
