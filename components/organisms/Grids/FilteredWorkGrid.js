@@ -20,7 +20,7 @@ export default function FilteredWorkGrid({data}) {
     } else {
         state = true
     }
-
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         if (value === 'all') {
             setFilteredData(data)
