@@ -8,11 +8,13 @@ import { allWorkPages, getWorkBySlug } from "../../lib/API";
 // UI
 import Layout from '../../templates/Layout'
 import ProjectHero from '../../components/organisms/Heros/ProjectHero';
+import LaptopMockup from "../../components/organisms/Content/LaptopMockup";
 
 export default function Works({ work }) {
     return (
         <Layout title={work?.title}>
             <ProjectHero data={work} />
+            {work?.projectImage && <LaptopMockup data={work}/>}
             {work?.content ?
                 work.content.map((component, index) => (
                     <Components data={component} key={index} />
