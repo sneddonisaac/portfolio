@@ -22,7 +22,6 @@ export default function FilteredWorkGrid({data}) {
     }
 
     useEffect(() => {
-        console.log('test fired', value)
         if (value === 'all') {
             setFilteredData(data)
         } else {
