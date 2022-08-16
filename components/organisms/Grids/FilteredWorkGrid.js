@@ -27,6 +27,7 @@ export default function FilteredWorkGrid({data}) {
         } else {
             setFilteredData(data.filter(filter => filter.projectType[0] === value))
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value])
 
     return (
@@ -100,6 +101,7 @@ function Header({props, projects, value, setValue}) {
 
     useEffect(() => {
         setValue(options[0].slug)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
