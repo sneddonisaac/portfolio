@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Container from "../../atoms/Container";
 
 export default function ProjectHero({data}) {
-    console.log(data)
     return (
         <div id={`block_name: ProjectHero, block_id: ${data?.id}`}>
             <Container>
@@ -34,14 +33,14 @@ export default function ProjectHero({data}) {
                             <h1 className='text-sm text-gray-500'>Links</h1>
                             {data?.codeLink &&
                                 <Link href={data.codeLink}>
-                                    <a className='text-lg text-black after:content-["_↗"]'>
+                                    <a className='text-lg text-black after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
                                         Code
                                     </a>
                                 </Link>
                             }
                             {data?.projectLink &&
                                 <Link href={data.projectLink}>
-                                    <a className='text-lg text-black after:content-["_↗"]'>
+                                    <a className='text-lg text-black after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
                                         Site
                                     </a>
                                 </Link>

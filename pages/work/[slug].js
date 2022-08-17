@@ -3,33 +3,33 @@ import Link from 'next/link';
 
 // Data
 import Components from '../../utils/page-sections/individual-work';
-import { allWorkPages, getWorkBySlug } from "../../lib/API";
+import {allWorkPages, getWorkBySlug} from "../../lib/API";
 
 // UI
 import Layout from '../../templates/Layout'
 import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 import LaptopMockup from "../../components/organisms/Content/LaptopMockup";
 
-export default function Works({ work }) {
+export default function Works({work}) {
     return (
         <Layout title={work?.title}>
-            <ProjectHero data={work} />
+            <ProjectHero data={work}/>
             {work?.projectImage && <LaptopMockup data={work}/>}
             {work?.content ?
                 work.content.map((component, index) => (
-                    <Components data={component} key={index} />
+                    <Components data={component} key={index}/>
                 ))
                 :
                 <div className='w-full flex justify-center items-center'>
                     <h1>Sorry there doesn&apos;t seem to be any notes on this project yet</h1>
                 </div>
             }
-            {work?.projectLink && <ProjectButtons data={work.projectLink} />}
+            {work?.projectLink && <ProjectButtons data={work.projectLink}/>}
         </Layout>
     )
 }
 
-function ProjectButtons({ data }) {
+function ProjectButtons({data}) {
     return (
         <div className='fixed right-8 bottom-16 z-[120]'>
             <Link href={data}>
@@ -49,7 +49,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({params}) {
     const data = await getWorkBySlug(params.slug)
     return {
         props: {

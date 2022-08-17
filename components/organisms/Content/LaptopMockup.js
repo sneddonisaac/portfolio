@@ -1,5 +1,4 @@
 export default function LaptopMockup({data}) {
-    console.log(data)
     return (
         <div className='pb-20 px-8'>
             <Mockup {...data} />
@@ -16,7 +15,6 @@ function Mockup(props) {
 }
 
 function DeviceImage(props) {
-    console.log(props)
     return (
         <div id="DeviceImage" className="w-fit absolute h-full flex justify-center items-start">
             <FeaturedImage {...props.projectImage} />
