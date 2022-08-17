@@ -14,7 +14,7 @@ export default function Works({work}) {
     return (
         <Layout title={work?.title}>
             <ProjectHero data={work}/>
-            {work?.projectImage && <LaptopMockup data={work}/>}
+            {/*{work?.projectImage && <LaptopMockup data={work}/>}*/}
             {work?.content ?
                 work.content.map((component, index) => (
                     <Components data={component} key={index}/>

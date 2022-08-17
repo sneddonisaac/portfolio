@@ -54,7 +54,7 @@ function Card({item, index}) {
                 <a className={clsx('w-full h-fit flex flex-col', !item?.projectImage ? 'justify-end items-end' : 'justify-center items-center')}>
                     {item.projectImage ?
                         <>
-                            <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-video"/>
+                            <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-[41/26]"/>
                         </>
                         :
                         <span className='w-full h-full flex justify-center items-center aspect-video'>No Image Avaliable</span>
@@ -102,18 +102,20 @@ function Header({props, projects, value, setValue}) {
     }, [])
 
     return (
-        <header className='pt-36 flex justify-between items-end'>
+        <header className='pt-36 flex flex-col sm:flex-row justify-between items-start sm:items-end'>
             <div className='relative w-min'>
                 <h1 className='block text-8xl font-satoshi-bold'>Work</h1>
                 <span className='absolute top-0 -right-3 text-lg'>{projects.length}</span>
             </div>
-            <select value={value} onChange={(e) => setValue(e.target.value)}>
-                {options.map((option, index) => (
-                    <option key={index} value={option.slug}>
-                        {option.title}
-                    </option>
-                ))}
-            </select>
+            <div className='w-full sm:w-fit py-4 space-y-2 font-satoshi-bold'>
+                <select className='w-full sm:w-fit text-center' value={value} onChange={(e) => setValue(e.target.value)}>
+                    {options.map((option, index) => (
+                        <option key={index} value={option.slug}>
+                            {option.title}
+                        </option>
+                    ))}
+                </select>
+            </div>
         </header>
     )
 }

@@ -9,16 +9,16 @@ export default function LaptopMockup({data}) {
 function Mockup(props) {
     return (
         <div id={`device_id: ${props.id}`} className="relative h-[10rem] md:h-[30rem] xl:h-[50rem] flex justify-center items-center">
-            <DeviceImage {...props} />
+            <DeviceImage {...props.projectImage} />
         </div>
     )
 }
 
 function DeviceImage(props) {
     return (
-        <div id="DeviceImage" className="w-fit absolute h-full flex justify-center items-start">
-            <FeaturedImage {...props.projectImage} />
-            <picture className="w-fit h-fit object-cover object-center overflow-hidden z-10">
+        <div id="DeviceImage" className="relative h-full w-full flex justify-center items-center">
+            <FeaturedImage {...props} />
+            <picture className="w-full h-full absolute inset-0 object-contain object-center overflow-hidden z-10">
                 <img className="object-cover object-center h-full overflow-hidden z-10"
                      src="/device-mbp-15.png" alt='iphone 13 no notch'
                 />
@@ -29,10 +29,12 @@ function DeviceImage(props) {
 
 function FeaturedImage(props) {
     return (
-        <div id={`FeaturedImage: ${props.fileName}`} className="absolute w-[75%] h-fit z-0">
+        <div id={`FeaturedImage: ${props.fileName}`} className='absolute top-0 mx-auto w-[75%] h-auto'>
             <picture>
-                <img className="object-cover h-full object-center overflow-clip rounded-[10%/5%] mt-[0.2vw] aspect-video" src={props.url}
-                     alt={props.fileName}/>
+                <img
+                    className='object-contain h-full w-fit object-center overflow-clip rounded-[10%/5%] mt-[0.2vw] after:bg-[url("/device-mbp-15.png")]'
+                    src={props.url}
+                    alt={props.alt}/>
             </picture>
         </div>
     )
