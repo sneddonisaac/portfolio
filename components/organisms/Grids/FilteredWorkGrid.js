@@ -54,7 +54,7 @@ function Card({item, index}) {
                 <a className={clsx('w-full h-fit flex flex-col', !item?.projectImage ? 'justify-end items-end' : 'justify-center items-center')}>
                     {item.projectImage ?
                         <>
-                            <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-video"/>
+                            <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-[41/26]"/>
                         </>
                         :
                         <span className='w-full h-full flex justify-center items-center aspect-video'>No Image Avaliable</span>

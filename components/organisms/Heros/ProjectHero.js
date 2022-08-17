@@ -14,7 +14,7 @@ export default function ProjectHero({data}) {
                         <span className="text-base mt-6">Unfortunately I am unable to provide images pertaining to this project.</span>}
                 </span>
                 </div>
-                <div className='grid grid-rows-1 md:grid-cols-2 pb-24'>
+                <div className='grid grid-rows-1 md:grid-cols-2'>
                     <div className='hidden md:block'/>
                     <div className='grid grid-rows-3 md:grid-cols-3 md:grid-rows-1'>
                         <div className='flex flex-col'>
