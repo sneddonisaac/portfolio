@@ -16,8 +16,6 @@ export default function FilteredWorkGrid({data}) {
     let state = false;
     state = data.length % 2 !== 0;
 
-    console.log(state)
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         if (value === 'all') {
@@ -42,10 +40,6 @@ export default function FilteredWorkGrid({data}) {
         </div>
     )
 }
-
-//
-// second-last-child:border-b-2 last:border-t-0 sm:third-last-child:border-b-2
-// divide-y-2 divide-x-2
 
 function Card({item, index}) {
     return (
