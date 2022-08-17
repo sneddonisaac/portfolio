@@ -10,8 +10,8 @@ body, html {
 
 @layer utilities {
     .noise-bg {
-        background: url("https://swaychain.com/wp-content/themes/swaychain/assets/dist/49aec3785910877842f7a04727d45722.png");
-        opacity: 0.75;
+        background: url("/bg-static.png");
+        opacity: 0.5;
         animation: noise 0.9s infinite;
         pointer-events: none;
     }
