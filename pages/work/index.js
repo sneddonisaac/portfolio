@@ -2,7 +2,7 @@
 import {allWorkPages} from '../../lib/API'
 
 // UI
-import Layout from '../../templates/Layout'
+import BasicLayout from '../../templates/BasicLayout'
 import FilteredWorkGrid from "../../components/organisms/Grids/FilteredWorkGrid";
 
 export async function getStaticProps() {
@@ -16,8 +16,8 @@ export async function getStaticProps() {
 
 export default function Works({ works }) {
   return (
-    <Layout title="Work">
+    <BasicLayout title="Work">
       <FilteredWorkGrid data={works} />
-    </Layout>
+    </BasicLayout>
   )
 }

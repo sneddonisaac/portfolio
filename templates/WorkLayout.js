@@ -1,8 +1,8 @@
 import Navbar from '../components/molecules/Navbar'
-import Footer from '../components/molecules/Footer'
 import Meta from '../components/atoms/Meta'
+import WorkFooter from "../components/molecules/WorkFooter";
 
-export default function Layout({ children, title }) {
+export default function WorkLayout({ children, title }) {
     return (
         <div className='relative font-satoshi-regular text-black bg-white'>
             <Meta title={title} />
@@ -10,7 +10,7 @@ export default function Layout({ children, title }) {
             <div className='relative'>
                 {children}
             </div>
-            <Footer />
+            <WorkFooter />
         </div>
     )
 }
