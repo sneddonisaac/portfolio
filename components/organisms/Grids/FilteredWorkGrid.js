@@ -53,7 +53,7 @@ function Card({item, index}) {
             title={item.title}
             whileInView={{opacity: [0, 1]}}
             transition={{duration: 1, ease: 'easeInOut'}}
-            className={clsx("w-full h-fit col-span-1 row-span-2 overflow-hidden py-[3vw] sm:p-[1vw] border-2 border-b-0 border-black even:border-l-0 odd:border-r-0 odd:border-l-0 even:border-r-0 even:border-l-0 sm:odd:border-r-[1px] sm:odd:second-last-child:border-b-2 sm:odd:last:border-r-2 sm:even:border-l-[1px] last:border-b-2",
+            className={clsx("w-full h-fit col-span-1 row-span-2 overflow-hidden py-[3vw] sm:p-[1vw] border-2 border-b-0 border-black even:border-l-0 odd:border-r-0 odd:border-l-0 even:border-r-0 sm:odd:border-r-[1px] sm:odd:border-l-2 sm:even:border-r-2 sm:odd:second-last-child:border-b-2 sm:odd:last:border-r-2 sm:even:border-l-[1px] last:border-b-2",
                 index && 'sm:odd:last:col-span-2 sm:odd:last:row-span-2')}
         >
             <Link href={`/work/${item?.slug}`}>
