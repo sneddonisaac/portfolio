@@ -14,18 +14,18 @@ export default function FilteredWorkGrid({data}) {
     const [value, setValue] = useState('all')
     const [filteredData, setFilteredData] = useState(data)
     let state = false;
+    state = data.length % 2 !== 0;
 
-    if (data.length % 2 === 0) {
-        return state;
-    } else {
-        state = true
-    }
+    console.log(state)
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         if (value === 'all') {
             setFilteredData(data)
+            state = data.length % 2 !== 0;
         } else {
             setFilteredData(data.filter(filter => filter.projectType[0] === value))
+            state = data.length % 2 !== 0;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value])
@@ -34,7 +34,7 @@ export default function FilteredWorkGrid({data}) {
         <div className='max-w-[92vw] mx-auto'>
             <Header props={data} value={value} projects={filteredData} setValue={setValue}/>
             <div
-                className="w-full h-full mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 grid-flow-row auto-rows-fr">
+                className="w-full h-full mx-auto py-10 grid grid-cols-1 sm:grid-cols-2">
                 {filteredData?.map((item, index) => (
                     <Card item={item} index={state} key={index}/>
                 ))}
@@ -43,6 +43,9 @@ export default function FilteredWorkGrid({data}) {
     )
 }
 
+//
+// second-last-child:border-b-2 last:border-t-0 sm:third-last-child:border-b-2
+// divide-y-2 divide-x-2
 
 function Card({item, index}) {
     return (
@@ -50,11 +53,11 @@ function Card({item, index}) {
             title={item.title}
             whileInView={{opacity: [0, 1]}}
             transition={{duration: 1, ease: 'easeInOut'}}
-            className={clsx("w-full overflow-hidden py-[3vw] sm:p-[1vw] border-t-2 sm:odd:border-r-2 sm:even:border-r-0 border-black",
-                index && 'second-last-child:border-b-2 last:border-t-0 sm:third-last-child:border-b-2')}
+            className={clsx("w-full h-fit col-span-1 row-span-2 overflow-hidden py-[3vw] sm:p-[1vw] border-2 border-b-0 border-black even:border-l-0 odd:border-r-0 odd:border-l-0 even:border-r-0 even:border-l-0 sm:odd:border-r-[1px] sm:odd:second-last-child:border-b-2 sm:odd:last:border-r-2 sm:even:border-l-[1px] last:border-b-2",
+                index && 'sm:odd:last:col-span-2 sm:odd:last:row-span-2')}
         >
             <Link href={`/work/${item?.slug}`}>
-                <a className={clsx('w-full h-full flex flex-col', !item?.projectImage ? 'justify-end items-end' : 'justify-center items-center')}>
+                <a className={clsx('w-full h-fit flex flex-col', !item?.projectImage ? 'justify-end items-end' : 'justify-center items-center')}>
                     {item.projectImage ?
                         <>
                             <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-video"/>
