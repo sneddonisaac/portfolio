@@ -22,13 +22,19 @@ body, html {
         pointer-events: none;
     }
 
-    .gradient-bg {
+    .dark-gradient-bg {
+        background: linear-gradient(0.33turn, #28292e, rgba(25, 25, 28, 0.75), rgba(55, 54, 54, 0.75));
+        background-size: 500% 500%;
+        animation: noise 12s ease infinite;
+    }
+
+    .light-gradient-bg {
         background: linear-gradient(0.33turn, #ef008f, #7038ff, #6ec3f4, #ffba27);
         background-size: 100% 100%;
         animation: noise 12s ease infinite;
     }
 
-    .gradient-bg-reverse {
+    .light-gradient-bg-reverse {
         background: linear-gradient(0.66turn, #ffba27, #6ec3f4, #7038ff, #ef008f);
         background-size: 100% 100%;
         animation: noise 12s ease infinite;

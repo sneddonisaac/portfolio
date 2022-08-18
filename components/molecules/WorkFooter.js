@@ -36,7 +36,7 @@ export default function WorkFooter() {
                                 <Link key={index} href={social.href}>
                                     <a className='group w-fit'>
                                         <h4>{social.name}</h4>
-                                        <div className='group-hover:underscore-hover bg-white' />
+                                        <div className='group-hover:underscore-hover bg-white h-[2px] w-0' />
                                     </a>
                                 </Link>
                             ))}

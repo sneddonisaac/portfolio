@@ -1,6 +1,3 @@
-// Libs
-import Link from 'next/link';
-
 // Data
 import Components from '../../utils/page-sections/individual-work';
 import {allWorkPages, getWorkBySlug} from "../../lib/API";
@@ -12,7 +9,7 @@ import WorkLayout from "../../templates/WorkLayout";
 
 export default function Works({work}) {
     return (
-        <WorkLayout title={work?.title}>
+        <WorkLayout title={work?.title} data={work}>
             <ProjectHero data={work}/>
             {/*{work?.projectImage && <LaptopMockup data={work}/>}*/}
             {work?.content ?

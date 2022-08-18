@@ -5,7 +5,7 @@ export default function NoisyGradient5050Full(props) {
     console.log(props)
     return (
         <div id={`block_name: ${props?.__typename}, block_id: ${props?.id}`} className='relative'>
-            <div className='gradient-bg w-full h-full'>
+            <div className='light-gradient-bg w-full h-full'>
                 <div className='noise-bg absolute inset-0'/>
                 <Container>
                     <div className='noise-bg absolute inset-0 z-[-1]'/>

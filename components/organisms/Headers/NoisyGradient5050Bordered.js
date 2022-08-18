@@ -6,7 +6,7 @@ export default function NoisyGradient5050Bordered(props) {
         <div id={`block_name: ${props?.__typename}, block_id: ${props?.id}`}>
             <Container>
                 <div className='relative'>
-                    <div className='relative gradient-bg-reverse w-full h-full'>
+                    <div className='relative light-gradient-bg-reverse w-full h-full'>
                         <div className='noise-bg absolute inset-0 z-0'/>
                         <div
                             className='text-white z-10 grid place-content-center auto-rows-[_0.5fr] sm:grid-cols-3 gap-16 py-12 px-16 text-white h-fit text-center sm:text-left'>
