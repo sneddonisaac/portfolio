@@ -11,7 +11,7 @@ export default function WorkLayout({ children, title, data }) {
             <div className='relative'>
                 {children}
             </div>
-            {data.selectedWork && <RelatedProject {...data.selectedWork} />}
+            {data?.selectedWork && <RelatedProject {...data.selectedWork} />}
             <WorkFooter />
         </div>
     )
