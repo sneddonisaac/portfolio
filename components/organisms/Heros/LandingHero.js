@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LandingHero({ data }) {
     return (
-        <div className="h-screen w-full relative flex justify-end items-end sm:items-start">
+        <div id='LandingHero' className="h-screen w-full relative flex justify-end items-end sm:items-start">
             {data && (
                 <WorkItem title={data.title} slug={data.slug} description={data.description} projectTags={data.projectTags} />
             )}
@@ -29,16 +29,18 @@ function WorkItem({ title, description, projectTags, slug }) {
                         ))}
                     </div>
                     <Link href={`/work/${slug}`}>
-                        <a id="link" className="whitespace-nowrap underline underline-offset-4 decoration-2 font-satoshi-bold hidden lg:block">
+                        <a id="link" className="whitespace-nowrap font-satoshi-bold hidden lg:block group">
                             Learn More
+                            <div className='group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white' />
                         </a>
                     </Link>
                 </div>
             </div>
             <div className="absolute right-5 bottom-5 flex flex-col justify-end items-end">
                 <Link href={`/work/${slug}`}>
-                    <a className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold sm:hidden">
+                    <a className="font-satoshi-bold sm:hidden group">
                         Learn More
+                        <div className='group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white' />
                     </a>
                 </Link>
                 Featured Work
