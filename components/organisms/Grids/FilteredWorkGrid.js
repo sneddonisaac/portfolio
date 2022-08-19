@@ -47,7 +47,7 @@ function Card({item, index}) {
             title={item.title}
             whileInView={{opacity: [0, 1]}}
             transition={{duration: 1, ease: 'easeInOut'}}
-            className={clsx("w-full h-fit col-span-1 row-span-2 overflow-hidden py-[3vw] sm:p-[1vw] border-2 border-b-0 border-black even:border-l-0 odd:border-r-0 odd:border-l-0 even:border-r-0 sm:odd:border-r-[1px] sm:odd:border-l-2 sm:even:border-r-2 sm:odd:second-last-child:border-b-2 sm:odd:last:border-r-2 sm:even:border-l-[1px] last:border-b-2",
+            className={clsx("w-full h-fit col-span-1 row-span-2 overflow-hidden py-[3vw] sm:p-[1vw] border-2 border-b-0 border-black dark:border-white even:border-l-0 odd:border-r-0 odd:border-l-0 even:border-r-0 sm:odd:border-r-[1px] sm:odd:border-l-2 sm:even:border-r-2 sm:odd:second-last-child:border-b-2 sm:odd:last:border-r-2 sm:even:border-l-[1px] last:border-b-2",
                 index && 'sm:odd:last:col-span-2 sm:odd:last:row-span-2')}
         >
             <Link href={`/work/${item?.slug}`}>
@@ -57,7 +57,7 @@ function Card({item, index}) {
                             <BasicImage data={item?.projectImage} className="w-full object-cover h-full aspect-[41/26]"/>
                         </>
                         :
-                        <span className='w-full h-full flex justify-center items-center aspect-video'>No Image Avaliable</span>
+                        <span className='w-full h-full flex justify-center items-center aspect-[41/26]'>No Image Avaliable</span>
                     }
                     <CardDetails {...item} />
                 </a>
@@ -108,7 +108,7 @@ function Header({props, projects, value, setValue}) {
                 <span className='absolute top-0 -right-3 text-lg'>{projects.length}</span>
             </div>
             <div className='w-full sm:w-fit py-4 space-y-2 font-satoshi-bold'>
-                <select className='w-full sm:w-fit text-center' value={value} onChange={(e) => setValue(e.target.value)}>
+                <select className='w-full sm:w-fit text-center bg-white dark:bg-black text-black dark:text-white' value={value} onChange={(e) => setValue(e.target.value)}>
                     {options.map((option, index) => (
                         <option key={index} value={option.slug}>
                             {option.title}

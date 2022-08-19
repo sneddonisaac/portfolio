@@ -5,7 +5,7 @@ import RelatedProject from "../components/organisms/RelatedProject";
 
 export default function WorkLayout({ children, title, data }) {
     return (
-        <div className='relative font-satoshi-regular text-black bg-white'>
+        <div className='relative font-satoshi-regular'>
             <Meta title={title} />
             <Navbar />
             <div className='relative'>

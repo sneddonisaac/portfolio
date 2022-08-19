@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import clsx from "clsx";
 
 const nav = [
     { title: 'Main', path: '/' },
-    { title: 'Work', path: '/work' },/* 
-    { title: 'Snippets', path: '/snippets' }, */
+    { title: 'Work', path: '/work' },
 ]
 
 export default function Navbar() {
@@ -16,7 +15,7 @@ export default function Navbar() {
         <div id="Navbar" className="font-satoshi-regular fixed bg-transparent w-full h-fit z-[120]">
             <div className="font-satoshi-bold text-5xl pt-12 px-5 sm:px-20 flex justify-between items-center">
                 <Link href="/">
-                    <a>
+                    <a className=''>
                         Isaac.
                     </a>
                 </Link>
@@ -41,16 +40,14 @@ function HamburgerMenu() {
     function handleClick(e) {
         e.preventDefault();
         setOpen(!open);
-
-
     }
 
     return (
         <div className="h-6">
             <button onClick={(e) => handleClick(e)} className="z-[130] h-full flex flex-col justify-between content-between">
-                <div className={`${open ? '-rotate-45 translate-y-[10px] transition-transform duration-300' : ''} bg-black h-0.5 w-8`} />
-                <div className={`${open ? "rotate-45 transition-transform duration-300" : ''} bg-black h-0.5 w-8`} />
-                <div className={`${open ? 'duration-150 bg-transparent' : 'bg-black'} h-0.5 w-6`} />
+                <div className={clsx(open && '-rotate-45 translate-y-[10px] transition-transform duration-300', 'bg-black dark:bg-white h-0.5 w-8')} />
+                <div className={clsx(open && "rotate-45 transition-transform duration-300", 'bg-black dark:bg-white h-0.5 w-8')} />
+                <div className={`${open ? 'duration-150 bg-transparent' : 'bg-black dark:bg-white'} h-0.5 w-6`} />
             </button>
             <Menu open={open} />
         </div>

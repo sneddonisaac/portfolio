@@ -4,7 +4,7 @@ import Meta from '../components/atoms/Meta'
 
 export default function BasicLayout({ children, title }) {
     return (
-        <div className='relative font-satoshi-regular text-black bg-white'>
+        <div className='relative font-satoshi-regular'>
             <Meta title={title} />
             <Navbar />
             <div className='relative'>
