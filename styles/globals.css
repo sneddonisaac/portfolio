@@ -7,10 +7,13 @@
     --black: #28292e;
 }
 
-html {
+body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+html {
     color: var(--black);
     background: var(--white);
 }
