@@ -1,19 +1,19 @@
 // Data
-import Components from '../../utils/page-sections/individual-work';
+import Blocks from '../../utils/page-sections/lab';
 import {allLabPages, getLabBySlug} from "../../lib/API";
 
 // UI
 import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 import ProjectLayout from "../../templates/ProjectLayout";
 
-export default function Works({lab}) {
+export default function Labs({lab}) {
     console.log(lab);
     return (
         <ProjectLayout title={lab?.title} data={lab}>
             <ProjectHero data={lab}/>
             {lab?.content ?
                 lab.content.map((component, index) => (
-                    <Components data={component} key={index}/>
+                    <Blocks data={component} key={index}/>
                 ))
                 :
                 <div className='w-full flex justify-center items-center'>

@@ -4,7 +4,7 @@ import Simple5050 from "../../components/organisms/Headers/Simple5050";
 import NoisyGradient5050Full from "../../components/organisms/Headers/NoisyGradient5050Full";
 import NoisyGradient5050Bordered from "../../components/organisms/Headers/NoisyGradient5050Bordered";
 
-export default function Components({ data }) {
+export default function Blocks({ data }) {
     if (data.__typename === 'Simple5050Header') {
         return <Simple5050 data={data} />;
     } else if (data.__typename === 'TripleMobileMockup') {
