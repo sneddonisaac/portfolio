@@ -34,7 +34,7 @@ export default function WorkFooter() {
                         <div className='grid grid-rows-1 grid-flow-col gap-x-8 place-items-center sm:place-items-start'>
                             {socials.map((social, index) => (
                                 <Link key={index} href={social.href}>
-                                    <a className='group w-fit'>
+                                    <a className='group w-fit' target='_blank' rel='noreferrer noopener'>
                                         <h4>{social.name}</h4>
                                         <div className='group-hover:underscore-hover bg-white h-[2px] w-0' />
                                     </a>
@@ -49,7 +49,7 @@ export default function WorkFooter() {
 }
 
 const socials = [
-    { name: 'LinkedIn', href: '' },
-    { name: 'Instagram', href: '' },
-    { name: 'Twitter', href: '' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/isaacsneddonjenkins/' },
+    { name: 'Instagram', href: 'https://www.instagram.com/snedothedevo/' },
+    { name: 'Twitter', href: 'https://twitter.com/devsned' },
 ]
