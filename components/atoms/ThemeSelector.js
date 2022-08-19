@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import clsx from 'clsx'
 
 const themes = [
     { name: 'Light', value: 'light', icon: LightIcon },
@@ -48,12 +47,16 @@ export default function ThemeSelector(props) {
 
     useEffect(() => {
         if (selectedTheme) {
-            document.documentElement.setAttribute('data-theme', selectedTheme.value)
+            document.documentElement.setAttribute(
+                'data-theme',
+                selectedTheme.value
+            )
         } else {
             setSelectedTheme(
                 themes.find(
                     (theme) =>
-                        theme.value === document.documentElement.getAttribute('data-theme')
+                        theme.value ===
+                        document.documentElement.getAttribute('data-theme')
                 )
             )
         }
@@ -61,7 +64,7 @@ export default function ThemeSelector(props) {
 
     return (
         <div>
-            <LightIcon className='bg-dark' />
+            <LightIcon className="bg-dark" />
             <SystemIcon />
             <DarkIcon />
         </div>

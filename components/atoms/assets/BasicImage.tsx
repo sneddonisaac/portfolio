@@ -5,7 +5,7 @@ type Props = {
     data: ImageTypes
 }
 
-export default function BasicImage({data, className}: Props) {
+export default function BasicImage({ data, className }: Props) {
     return (
         <picture>
             <img

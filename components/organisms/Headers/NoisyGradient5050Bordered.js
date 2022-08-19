@@ -1,28 +1,35 @@
-import Container from "../../atoms/Container";
-import clsx from "clsx";
+import Container from '../../atoms/Container'
+import clsx from 'clsx'
+import NoiseBG from '../../molecules/NoiseBG'
 
 export default function NoisyGradient5050Bordered(props) {
     return (
         <div id={`block_name: ${props?.__typename}, block_id: ${props?.id}`}>
             <Container>
-                <div className='relative'>
-                    <div className='relative light-gradient-bg-reverse w-full h-full'>
-                        <div className='noise-bg absolute inset-0 z-0'/>
-                        <div
-                            className='text-white z-10 grid place-content-center auto-rows-[_0.5fr] sm:grid-cols-3 gap-16 py-12 px-16 text-white h-fit text-center sm:text-left'>
-                            <h1 className={clsx('text-6xl h-fit font-satoshi-bold col-span-2', !props.paragraph && 'col-span-3')}>{props.NoisyBorderedHeading}</h1>
-                            {props.paragraph && (
-                                <>
-                                    <div className='col-span-1 h-fit hidden sm:block'/>
-                                    <div className='col-span-1 hidden sm:block'/>
-                                    <p className='col-span-2 text-justify'>
-                                        {props.paragraph}
-                                    </p>
-                                </>
+                <NoiseBG
+                    gradient="light-gradient-bg-reverse"
+                    classNames="text-white"
+                >
+                    <div className="z-10 grid h-fit auto-rows-[_0.5fr] place-content-center gap-16 py-12 px-16 text-center text-white text-white sm:grid-cols-3 sm:text-left">
+                        <h1
+                            className={clsx(
+                                'col-span-2 h-fit font-satoshi-bold text-6xl',
+                                !props.paragraph && 'col-span-3'
                             )}
-                        </div>
+                        >
+                            {props.NoisyBorderedHeading}
+                        </h1>
+                        {props.paragraph && (
+                            <>
+                                <div className="col-span-1 hidden h-fit sm:block" />
+                                <div className="col-span-1 hidden sm:block" />
+                                <p className="col-span-2 text-justify">
+                                    {props.paragraph}
+                                </p>
+                            </>
+                        )}
                     </div>
-                </div>
+                </NoiseBG>
             </Container>
         </div>
     )

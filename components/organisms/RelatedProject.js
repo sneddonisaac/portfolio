@@ -1,11 +1,12 @@
 import Container from "../atoms/Container";
 import Link from "next/link";
+import NoiseBG from "../molecules/NoiseBG";
 
 export default function RelatedProject(props) {
     return (
         <Link href={`/work/${props?.slug}`}>
             <a>
-                <div className='relative light-gradient-bg text-white'>
+                <NoiseBG gradient='light-gradient-bg' classNames='text-white'>
                     <Container>
                         <div className='py-12 flex flex-col justify-center items-center group space-y-12'>
                             <div className='text-center'>
@@ -19,8 +20,7 @@ export default function RelatedProject(props) {
                             </div>
                         </div>
                     </Container>
-                    <div className='noise-bg absolute inset-0 z-0'/>
-                </div>
+                </NoiseBG>
             </a>
         </Link>
     )

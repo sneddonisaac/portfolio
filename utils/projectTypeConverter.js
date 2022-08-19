@@ -1,7 +1,7 @@
 export default function projectTypeConverter(params) {
     let result = {
         title: '',
-        slug: params
+        slug: params,
     }
     switch (params) {
         case 'web_design':
@@ -11,5 +11,5 @@ export default function projectTypeConverter(params) {
             result.title = 'Web App'
             break
     }
-    return result;
+    return result
 }
