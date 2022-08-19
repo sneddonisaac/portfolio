@@ -11,10 +11,12 @@ export default function ProjectLayout({ children, title, data }) {
         >
             <Meta title={title} />
             <Navbar />
-            <main className="relative min-h-[90vh]">{children}</main>
-            {data?.relatedProject && (
-                <RelatedProject {...data.relatedProject} />
-            )}
+            <main className="relative min-h-[90vh]">
+                {children}
+                {data?.relatedProject && (
+                    <RelatedProject {...data.relatedProject} />
+                )}
+            </main>
             <Footer />
         </div>
     )
