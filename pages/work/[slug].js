@@ -7,7 +7,6 @@ import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 import ProjectLayout from "../../templates/ProjectLayout";
 
 export default function Works({work}) {
-    console.log(work);
     return (
         <ProjectLayout title={work?.title} data={work}>
             <ProjectHero data={work}/>

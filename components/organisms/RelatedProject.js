@@ -2,7 +2,6 @@ import Container from "../atoms/Container";
 import Link from "next/link";
 
 export default function RelatedProject(props) {
-    console.log(props);
     return (
         <Link href={`/work/${props?.slug}`}>
             <a>
