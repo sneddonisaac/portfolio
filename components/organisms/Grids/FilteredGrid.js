@@ -10,7 +10,7 @@ import clsx from "clsx";
 // UI
 import BasicImage from "../../atoms/assets/BasicImage"
 
-export default function FilteredWorkGrid({data}) {
+export default function FilteredGrid({data, title, type}) {
     const [value, setValue] = useState('all')
     const [filteredData, setFilteredData] = useState(data)
     let state = false;
@@ -30,18 +30,18 @@ export default function FilteredWorkGrid({data}) {
 
     return (
         <div className='max-w-[92vw] mx-auto'>
-            <Header props={data} value={value} projects={filteredData} setValue={setValue}/>
+            <Header props={data} title={title} value={value} projects={filteredData} setValue={setValue}/>
             <div
                 className="w-full h-full mx-auto py-10 grid grid-cols-1 sm:grid-cols-2">
                 {filteredData?.map((item, index) => (
-                    <Card item={item} index={state} key={index}/>
+                    <Card item={item} index={state} key={index} type={type} />
                 ))}
             </div>
         </div>
     )
 }
 
-function Card({item, index}) {
+function Card({item, index, type}) {
     return (
         <motion.div
             title={item.title}
@@ -50,7 +50,7 @@ function Card({item, index}) {
             className={clsx("w-full h-fit col-span-1 row-span-2 overflow-hidden py-[3vw] sm:p-[1vw] border-2 border-b-0 border-black dark:border-white even:border-l-0 odd:border-r-0 odd:border-l-0 even:border-r-0 sm:odd:border-r-[1px] sm:odd:border-l-2 sm:even:border-r-2 sm:odd:second-last-child:border-b-2 sm:odd:last:border-r-2 sm:even:border-l-[1px] last:border-b-2",
                 index && 'sm:odd:last:col-span-2 sm:odd:last:row-span-2')}
         >
-            <Link href={`/work/${item?.slug}`}>
+            <Link href={`/${type}/${item?.slug}`}>
                 <a className={clsx('w-full h-fit flex flex-col', !item?.projectImage ? 'justify-end items-end' : 'justify-center items-center')}>
                     {item.projectImage ?
                         <>
@@ -83,7 +83,7 @@ function CardDetails(props) {
     )
 }
 
-function Header({props, projects, value, setValue}) {
+function Header({props, projects, value, setValue, title}) {
     let types = [];
     let options = [{title: 'All', slug: 'all'}];
 
@@ -104,7 +104,7 @@ function Header({props, projects, value, setValue}) {
     return (
         <header className='pt-36 flex flex-col sm:flex-row justify-between items-start sm:items-end'>
             <div className='relative w-min'>
-                <h1 className='block text-8xl font-satoshi-bold'>Work</h1>
+                <h1 className='block text-8xl font-satoshi-bold'>{title}</h1>
                 <span className='absolute top-0 -right-3 text-lg'>{projects.length}</span>
             </div>
             <div className='w-full sm:w-fit py-4 space-y-2 font-satoshi-bold'>

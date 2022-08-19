@@ -1,18 +1,18 @@
 // Data
-import Blocks from '../../utils/page-sections/individual-work';
-import {allWorkPages, getWorkBySlug} from "../../lib/API";
+import Blocks from '../../utils/page-sections/lab';
+import {allLabPages, getLabBySlug} from "../../lib/API";
 
 // UI
 import ProjectHero from '../../components/organisms/Heros/ProjectHero';
 import ProjectLayout from "../../templates/ProjectLayout";
 
-export default function Works({work}) {
-    console.log(work);
+export default function Labs({lab}) {
+    console.log(lab);
     return (
-        <ProjectLayout title={work?.title} data={work}>
-            <ProjectHero data={work}/>
-            {work?.content ?
-                work.content.map((component, index) => (
+        <ProjectLayout title={lab?.title} data={lab}>
+            <ProjectHero data={lab}/>
+            {lab?.content ?
+                lab.content.map((component, index) => (
                     <Blocks data={component} key={index}/>
                 ))
                 :
@@ -25,18 +25,18 @@ export default function Works({work}) {
 }
 
 export async function getStaticPaths() {
-    const works = await allWorkPages()
+    const data = await allLabPages();
     return {
-        paths: works?.map((work) => `/work/${work.slug}`) || [],
+        paths: data?.map((lab) => `/lab/${lab.slug}`) || [],
         fallback: true,
     }
 }
 
 export async function getStaticProps({params}) {
-    const data = await getWorkBySlug(params.slug)
+    const data = await getLabBySlug(params.slug)
     return {
         props: {
-            work: {
+            lab: {
                 ...data,
             }
         },

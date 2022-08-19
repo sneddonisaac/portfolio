@@ -1,23 +1,23 @@
 // Data
-import {allWorkPages} from '../../lib/API'
+import {allLabPages} from '../../lib/API'
 
 // UI
 import BasicLayout from '../../templates/BasicLayout'
 import FilteredGrid from "../../components/organisms/Grids/FilteredGrid";
 
 export async function getStaticProps() {
-  const works = await allWorkPages();
+  const data = await allLabPages();
   return {
     props: {
-      works
+      data
     }
   }
 }
 
-export default function Works({ works }) {
+export default function Works({ data }) {
   return (
-    <BasicLayout title="Work">
-      <FilteredGrid data={works} title='Work' type='work' />
+    <BasicLayout title="Lab">
+      <FilteredGrid data={data} title='Lab' type='lab' />
     </BasicLayout>
   )
 }

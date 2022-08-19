@@ -5,9 +5,7 @@ import NoisyGradient5050Full from "../../components/organisms/Headers/NoisyGradi
 import NoisyGradient5050Bordered from "../../components/organisms/Headers/NoisyGradient5050Bordered";
 
 export default function Blocks({ data }) {
-    if (data.__typename === 'DecreasingImageGrid') {
-        return <DecreasingImageGrid data={data} />;
-    } else if (data.__typename === 'Simple5050Header') {
+    if (data.__typename === 'Simple5050Header') {
         return <Simple5050 data={data} />;
     } else if (data.__typename === 'TripleMobileMockup') {
         return <TripleMobileMockup data={data} />;
@@ -15,7 +13,5 @@ export default function Blocks({ data }) {
         return <NoisyGradient5050Full {...data} />;
     } else if (data.__typename === 'NoisyGradient5050Bordered') {
         return <NoisyGradient5050Bordered {...data} />;
-    } else {
-        return <div>There seems to be a problem here...</div>
     }
 }
