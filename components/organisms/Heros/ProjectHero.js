@@ -23,7 +23,7 @@ export default function ProjectHero({data}) {
                         </div>
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Services</h1>
-                            {data?.projectType.map((type, index) => (
+                            {data?.projectType?.map((type, index) => (
                                 <span className='text-lg' key={index}>
                                 {projectTypeConverter(type).title}
                             </span>
