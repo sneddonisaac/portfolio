@@ -1,6 +1,6 @@
 import Navbar from '../components/molecules/Navbar'
 import Meta from '../components/atoms/Meta'
-import WorkFooter from "../components/molecules/WorkFooter";
+import Footer from "../components/molecules/Footer";
 import RelatedProject from "../components/organisms/RelatedProject";
 
 export default function ProjectLayout({ children, title, data }) {
@@ -12,7 +12,7 @@ export default function ProjectLayout({ children, title, data }) {
                 {children}
             </div>
             {data?.relatedProject && <RelatedProject {...data.relatedProject} />}
-            <WorkFooter />
+            <Footer />
         </div>
     )
 }
