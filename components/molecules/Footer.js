@@ -15,7 +15,7 @@ export default function Footer() {
     setInterval(getDate, 10000)
 
     return (
-        <footer className='flex justify-between items-center bg-black text-white '>
+        <footer className='flex justify-between items-center bg-black text-white w-full'>
             <Container>
                 <div className='grid md:grid-cols-5 lg:grid-cols-6 w-full gap-y-8'>
                     <div className='grid grid-rows-1 grid-flow-col col-span-2'>

@@ -5,12 +5,12 @@ import RelatedProject from "../components/organisms/RelatedProject";
 
 export default function ProjectLayout({ children, title, data }) {
     return (
-        <div className='relative font-satoshi-regular'>
+        <div id='ProjectLayout' className='relative font-satoshi-regular min-h-screen h-full'>
             <Meta title={title} />
             <Navbar />
-            <div className='relative'>
+            <main className='relative min-h-[90vh]'>
                 {children}
-            </div>
+            </main>
             {data?.relatedProject && <RelatedProject {...data.relatedProject} />}
             <Footer />
         </div>
