@@ -53,13 +53,11 @@ export default function ProjectHero({data}) {
 }
 
 function Links(props) {
-    if (props?.href) {
-        return (
-            <Link href={props?.href}>
-                <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
-                    {props?.name}
-                </a>
-            </Link>
-        )
-    }
+    return (
+        <Link href={props?.href}>
+            <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
+                {props?.name}
+            </a>
+        </Link>
+    )
 }
