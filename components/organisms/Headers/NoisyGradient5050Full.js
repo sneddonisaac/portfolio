@@ -2,7 +2,6 @@ import Container from "../../atoms/Container";
 import clsx from "clsx";
 
 export default function NoisyGradient5050Full(props) {
-    console.log(props)
     return (
         <div id={`block_name: ${props?.__typename}, block_id: ${props?.id}`} className='relative'>
             <div className='light-gradient-bg w-full h-full'>

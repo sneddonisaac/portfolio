@@ -1,6 +1,7 @@
 import Navbar from '../components/molecules/Navbar'
-import Footer from '../components/molecules/Footer'
+import MainCTA from '../components/molecules/MainCTA'
 import Meta from '../components/atoms/Meta'
+import Footer from "../components/molecules/Footer";
 
 export default function BasicLayout({ children, title }) {
     return (
@@ -10,6 +11,7 @@ export default function BasicLayout({ children, title }) {
             <div className='relative'>
                 {children}
             </div>
+            <MainCTA />
             <Footer />
         </div>
     )
