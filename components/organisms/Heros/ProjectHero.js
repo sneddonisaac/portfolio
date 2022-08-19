@@ -1,6 +1,7 @@
 import projectTypeConverter from "../../../utils/projectTypeConverter";
 import Link from 'next/link'
 import Container from "../../atoms/Container";
+import clsx from "clsx";
 
 export default function ProjectHero({data}) {
     return (
@@ -16,11 +17,13 @@ export default function ProjectHero({data}) {
                 </div>
                 <div className='grid grid-rows-1 md:grid-cols-2'>
                     <div className='hidden md:block'/>
-                    <div className='grid grid-rows-3 md:grid-cols-3 md:grid-rows-1'>
-                        <div className='flex flex-col'>
-                            <h1 className='text-sm text-gray-500'>Client</h1>
-                            <span>{data?.client}</span>
-                        </div>
+                    <div className={clsx('grid grid-rows-3 md:grid-cols-2 md:grid-rows-1 space-y-4 md:space-y-0', data?.client && 'grid-cols-3')}>
+                        {data?.client && (
+                            <div className='flex flex-col'>
+                                <h1 className='text-sm text-gray-500'>Client</h1>
+                                <span>{data?.client}</span>
+                            </div>
+                        )}
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Services</h1>
                             {data?.projectType?.map((type, index) => (
