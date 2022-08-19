@@ -1,10 +1,10 @@
 export default function Prose({ details }) {
     return (
-        <div className='w-full'>
+        <div className="w-full">
             <div
-                className='w-full my-8 prose prose-black max-w-full prose-headings:text-center prose-headings:pt-6 prose-h3:text-4xl text-center prose-p:text-lg'
+                className="prose-black prose my-8 w-full max-w-full text-center prose-headings:pt-6 prose-headings:text-center prose-h3:text-4xl prose-p:text-lg"
                 dangerouslySetInnerHTML={{ __html: details }}
             />
         </div>
-    );
+    )
 }
