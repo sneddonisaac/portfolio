@@ -34,19 +34,15 @@ export default function ProjectHero({data}) {
                         </div>
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Links</h1>
-                            {data?.codeLink &&
-                                <Link href={data.codeLink}>
-                                    <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
-                                        Code
-                                    </a>
-                                </Link>
-                            }
-                            {data?.projectLink &&
-                                <Link href={data.projectLink}>
-                                    <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
-                                        Site
-                                    </a>
-                                </Link>
+                            {data?.codeLink && data.projectLink ?
+                                <>
+                                    <Links href={data.codeLink} name='Code' />
+                                    <Links href={data?.projectLink} name='Site' />
+                                </>
+                                :
+                                <>
+                                    <h1 className='text-lg'>There doesnt seem to be any links for this project</h1>
+                                </>
                             }
                         </div>
                     </div>
@@ -56,3 +52,14 @@ export default function ProjectHero({data}) {
     )
 }
 
+function Links(props) {
+    if (props?.href) {
+        return (
+            <Link href={props?.href}>
+                <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
+                    {props?.name}
+                </a>
+            </Link>
+        )
+    }
+}

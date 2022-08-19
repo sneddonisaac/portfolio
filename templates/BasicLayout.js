@@ -5,12 +5,12 @@ import Footer from "../components/molecules/Footer";
 
 export default function BasicLayout({ children, title }) {
     return (
-        <div className='relative font-satoshi-regular'>
+        <div id='BasicLayout' className='relative font-satoshi-regular'>
             <Meta title={title} />
             <Navbar />
-            <div className='relative'>
+            <main className='relative'>
                 {children}
-            </div>
+            </main>
             <MainCTA />
             <Footer />
         </div>
