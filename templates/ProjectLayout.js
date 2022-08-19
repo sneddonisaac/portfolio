@@ -3,7 +3,7 @@ import Meta from '../components/atoms/Meta'
 import WorkFooter from "../components/molecules/WorkFooter";
 import RelatedProject from "../components/organisms/RelatedProject";
 
-export default function WorkLayout({ children, title, data }) {
+export default function ProjectLayout({ children, title, data }) {
     return (
         <div className='relative font-satoshi-regular'>
             <Meta title={title} />
@@ -11,7 +11,7 @@ export default function WorkLayout({ children, title, data }) {
             <div className='relative'>
                 {children}
             </div>
-            {data?.selectedWork && <RelatedProject {...data.selectedWork} />}
+            {data?.relatedProject && <RelatedProject {...data.relatedProject} />}
             <WorkFooter />
         </div>
     )

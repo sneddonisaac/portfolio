@@ -6,6 +6,7 @@ import clsx from "clsx";
 const nav = [
     { title: 'Main', path: '/' },
     { title: 'Work', path: '/work' },
+    { title: 'Lab', path: '/lab' },
 ]
 
 export default function Navbar() {
