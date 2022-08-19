@@ -41,7 +41,7 @@ export default function ProjectHero({data}) {
                                 </>
                                 :
                                 <>
-                                    <h1 className='text-lg'>There doesnt seem to be any links for this project</h1>
+                                    <h1 className='text-lg'>There doesn&apos;t seem to be any links for this project</h1>
                                 </>
                             }
                         </div>
