@@ -34,10 +34,10 @@ export default function ProjectHero({data}) {
                         </div>
                         <div className='flex flex-col'>
                             <h1 className='text-sm text-gray-500'>Links</h1>
-                            {data?.codeLink && data.projectLink ?
+                            {data?.codeLink || data?.projectLink ?
                                 <>
-                                    <Links href={data.codeLink} name='Code' />
-                                    <Links href={data?.projectLink} name='Site' />
+                                    {data?.codeLink && <Links href={data?.codeLink} name='Code'/>}
+                                    {data?.projectLink && <Links href={data?.projectLink} name='Site'/>}
                                 </>
                                 :
                                 <>
@@ -53,13 +53,11 @@ export default function ProjectHero({data}) {
 }
 
 function Links(props) {
-    if (props?.href) {
-        return (
-            <Link href={props?.href}>
-                <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
-                    {props?.name}
-                </a>
-            </Link>
-        )
-    }
+    return (
+        <Link href={props?.href}>
+            <a className='text-lg after:content-["_↗"]' target='_blank' rel='noopener nofollow'>
+                {props?.name}
+            </a>
+        </Link>
+    )
 }
