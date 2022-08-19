@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LandingHero({ data }) {
     return (
-        <div className="h-screen w-full relative flex justify-end items-end sm:items-start">
+        <div id='LandingHero' className="h-screen w-full relative flex justify-end items-end sm:items-start">
             {data && (
                 <WorkItem title={data.title} slug={data.slug} description={data.description} projectTags={data.projectTags} />
             )}
@@ -15,9 +15,8 @@ export default function LandingHero({ data }) {
 }
 
 function WorkItem({ title, description, projectTags, slug }) {
-
     return (
-        <div className="lg:w-4/5 w-full sm:h-5/6 h-full relative bg-black bg-opacity-10 z-0 flex justify-center sm:justify-start items-end">
+        <div className="lg:w-4/5 w-full sm:h-5/6 h-full relative bg-black bg-opacity-10 dark:bg-white dark:bg-opacity-10 z-0 flex justify-center sm:justify-start items-end">
             <div className="sm:ml-12 sm:mb-12 mb-20 px-4 h-full sm:w-4/5 md:w-1/2 w-full flex flex-col justify-end items-start">
                 <span className="font-satoshi-bold text-4xl pb-4">{title}</span>
                 <span className="pb-4">
@@ -30,16 +29,18 @@ function WorkItem({ title, description, projectTags, slug }) {
                         ))}
                     </div>
                     <Link href={`/work/${slug}`}>
-                        <a id="link" className="whitespace-nowrap underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold hidden lg:block">
+                        <a id="link" className="whitespace-nowrap font-satoshi-bold hidden lg:block group">
                             Learn More
+                            <div className='group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white' />
                         </a>
                     </Link>
                 </div>
             </div>
             <div className="absolute right-5 bottom-5 flex flex-col justify-end items-end">
                 <Link href={`/work/${slug}`}>
-                    <a className="underline underline-offset-4 decoration-black decoration-2 font-satoshi-bold sm:hidden">
+                    <a className="font-satoshi-bold sm:hidden group">
                         Learn More
+                        <div className='group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white' />
                     </a>
                 </Link>
                 Featured Work

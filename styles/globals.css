@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --white: #fdffff;
+    --black: #28292e;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+html {
+    color: var(--black);
+    background: var(--white);
+}
+
+.dark {
+    color: var(--white);
+    background:var(--black);
 }
 
 @layer utilities {
