@@ -29,7 +29,6 @@ export default function ThemeSelector() {
 }
 
 function Button(props) {
-    console.log(props.theme)
     return (
         <button
             onClick={() =>
