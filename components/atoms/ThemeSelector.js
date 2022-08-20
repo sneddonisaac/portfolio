@@ -1,15 +1,21 @@
 import { useTheme } from 'next-themes'
 import { useLoaded } from '@/utils/hooks/useLoaded'
 import clsx from 'clsx'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ThemeSelector() {
+    const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
     const loaded = useLoaded()
 
     useEffect(() => {
         setTheme(localStorage.theme)
+        setMounted(true)
     }, [])
+
+    if (!mounted) {
+        return null
+    }
 
     return (
         <div
