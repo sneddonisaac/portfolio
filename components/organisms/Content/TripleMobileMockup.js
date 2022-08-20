@@ -5,7 +5,7 @@ export default function TripleMobileMockup(data) {
     return (
         <div
             id={`block_name: ${data?.__typename}, block_id: ${data?.id}`}
-            className="bg-black bg-opacity-10"
+            className="bg-black bg-opacity-10 dark:bg-gray-500"
         >
             <Container>
                 <div className="relative grid grid-cols-1 grid-rows-3 items-center justify-center gap-8 py-12 lg:grid-cols-3 lg:grid-rows-1">

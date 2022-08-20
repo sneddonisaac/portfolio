@@ -5,6 +5,7 @@ import NoisyGradient5050Full from '../../components/organisms/Headers/NoisyGradi
 import NoisyGradient5050Bordered from '../../components/organisms/Headers/NoisyGradient5050Bordered'
 import BlockNotShowing from '../BlockNotShowing'
 import SimpleHeader from '../../components/organisms/Headers/SimpleHeader'
+import MasonryImageGrid from '../../components/organisms/Grids/MasonryImageGrid'
 
 export default function Blocks(data) {
     switch (data.__typename) {
@@ -20,6 +21,8 @@ export default function Blocks(data) {
             return <NoisyGradient5050Bordered {...data} />
         case 'SimpleHeader':
             return <SimpleHeader {...data} />
+        case 'MasonryImageGrid':
+            return <MasonryImageGrid {...data} />
         default:
             return <BlockNotShowing {...data} />
     }
