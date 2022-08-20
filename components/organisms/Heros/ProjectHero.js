@@ -62,8 +62,8 @@ export default function ProjectHero(data) {
                             ) : (
                                 <>
                                     <h1 className="text-lg">
-                                        There doesn&apos;t seem to be any links
-                                        for this project
+                                        Unfortunately I am unable to provide any
+                                        links at this time.
                                     </h1>
                                 </>
                             )}

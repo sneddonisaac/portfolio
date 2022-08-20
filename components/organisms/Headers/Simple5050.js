@@ -10,7 +10,7 @@ export default function Simple5050(data) {
                 >
                     <h1
                         id="heading"
-                        className="row-span-1 font-satoshi-medium text-6xl"
+                        className="row-span-1 font-satoshi-medium text-6xl leading-snug"
                     >
                         {data?.SimpleHeading}
                     </h1>
