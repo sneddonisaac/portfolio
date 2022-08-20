@@ -13,8 +13,8 @@ const SEO = {
         url: defaultUrl,
     },
     twitter: {
-        handle: '@sneddev',
-        site: '@sneddev',
+        handle: '@devsned',
+        site: '@devsned',
         cardType: 'summary_large_image',
     },
 }
