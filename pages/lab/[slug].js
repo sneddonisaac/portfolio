@@ -1,5 +1,5 @@
 // Data
-import Blocks from '../../utils/page-sections/lab'
+import Blocks from '../../utils/page-sections/Blocks'
 import { allLabPages, getLabBySlug } from '../../lib/API'
 
 // UI

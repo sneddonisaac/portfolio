@@ -4,6 +4,7 @@ import Simple5050 from '../../components/organisms/Headers/Simple5050'
 import NoisyGradient5050Full from '../../components/organisms/Headers/NoisyGradient5050Full'
 import NoisyGradient5050Bordered from '../../components/organisms/Headers/NoisyGradient5050Bordered'
 import BlockNotShowing from '../BlockNotShowing'
+import SimpleHeader from '../../components/organisms/Headers/SimpleHeader'
 
 export default function Blocks(data) {
     switch (data.__typename) {
@@ -17,6 +18,8 @@ export default function Blocks(data) {
             return <NoisyGradient5050Full {...data} />
         case 'NoisyGradient5050Bordered':
             return <NoisyGradient5050Bordered {...data} />
+        case 'SimpleHeader':
+            return <SimpleHeader {...data} />
         default:
             return <BlockNotShowing {...data} />
     }
