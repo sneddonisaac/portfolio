@@ -44,11 +44,13 @@ export default function MasonryImageGrid(props) {
                             </Dialog.Trigger>
                             <Dialog.Portal>
                                 <Dialog.Overlay
+                                    id="dialog-overlay"
                                     className={
                                         'fixed inset-0 z-[130] bg-black bg-opacity-80'
                                     }
                                 />
                                 <Dialog.Content
+                                    id="dialog-content"
                                     className={
                                         'fixed top-1/2 left-1/2 z-[130] w-full -translate-x-1/2 -translate-y-1/2'
                                     }
