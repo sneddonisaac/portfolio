@@ -20,7 +20,7 @@ export default function ThemeSelector() {
     return (
         <div
             className={
-                'z-100 fixed bottom-8 right-8 h-fit w-fit rounded-md bg-black py-2 px-3 shadow-2xl dark:bg-white'
+                'fixed bottom-8 right-8 z-[130] h-fit w-fit rounded-md bg-black py-2 px-3 shadow-2xl dark:bg-white'
             }
         >
             <Button setTheme={setTheme} loaded={loaded} theme={theme} />
