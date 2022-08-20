@@ -1,5 +1,5 @@
 import Masonry from 'react-masonry-css'
-import Container from '../../atoms/Container'
+import Container from '@/components/atoms/Container'
 
 const breakpointColumnsObj = {
     default: 4,

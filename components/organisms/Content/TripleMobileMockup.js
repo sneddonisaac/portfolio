@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Container from '../../atoms/Container'
+import Container from '@/components/atoms/Container'
 
 export default function TripleMobileMockup(data) {
     return (

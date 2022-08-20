@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import NoiseBG from './NoiseBG'
-import Container from '../atoms/Container'
+import NoiseBG from '@/components/molecules/NoiseBG'
+import Container from '@/components/atoms/Container'
 
 export default function MainCTA() {
     return (

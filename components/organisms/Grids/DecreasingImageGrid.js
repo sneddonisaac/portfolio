@@ -2,7 +2,7 @@
 import clsx from 'clsx'
 
 // UI
-import Container from '../../atoms/Container'
+import Container from '@/components/atoms/Container'
 
 export default function DecreasingImageGrid(data) {
     return (

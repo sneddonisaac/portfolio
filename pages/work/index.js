@@ -1,9 +1,9 @@
 // Data
-import { allWorkPages } from '../../lib/API'
+import { allWorkPages } from '@/lib/API'
 
 // UI
-import BasicLayout from '../../templates/BasicLayout'
-import FilteredGrid from '../../components/organisms/Grids/FilteredGrid'
+import BasicLayout from '@/templates/BasicLayout'
+import FilteredGrid from '@/components/organisms/Grids/FilteredGrid'
 
 export async function getStaticProps() {
     const works = await allWorkPages()

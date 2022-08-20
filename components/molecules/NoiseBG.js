@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import BasicImage from '../atoms/assets/BasicImage'
+import BasicImage from '@/components/atoms/assets/BasicImage'
 
 export default function NoiseBG({ children, classNames, gradient, image }) {
     if (gradient) {

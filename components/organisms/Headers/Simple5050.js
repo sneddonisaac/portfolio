@@ -1,4 +1,4 @@
-import Container from '../../atoms/Container'
+import Container from '@/components/atoms/Container'
 
 export default function Simple5050(data) {
     return (

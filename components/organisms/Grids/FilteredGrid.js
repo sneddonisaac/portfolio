@@ -1,5 +1,5 @@
 // Libs/Utils
-import projectTypeConverter from '../../../utils/projectTypeConverter'
+import projectTypeConverter from '@/utils/functions/projectTypeConverter'
 
 // External
 import { useEffect, useState } from 'react'
@@ -8,7 +8,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 // UI
-import BasicImage from '../../atoms/assets/BasicImage'
+import BasicImage from '@/components/atoms/assets/BasicImage'
 
 export default function FilteredGrid({ data, title, type }) {
     const [value, setValue] = useState('all')

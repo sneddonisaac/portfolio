@@ -1,4 +1,4 @@
-import Container from '../atoms/Container'
+import Container from '@/components/atoms/Container'
 import { format } from 'date-fns'
 import { useState } from 'react'
 import Link from 'next/link'
