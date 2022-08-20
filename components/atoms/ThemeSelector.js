@@ -17,38 +17,31 @@ export default function ThemeSelector() {
                 'z-100 fixed bottom-8 right-8 h-fit w-fit rounded-md bg-black py-2 px-3 shadow-2xl dark:bg-white'
             }
         >
-            <button
-                onClick={() => setTheme('light')}
-                className={clsx(
-                    'group w-fit text-black',
-                    loaded && theme === 'light' && 'hidden'
-                )}
-            >
-                <h1
-                    className={
-                        'whitespace-nowrap decoration-black decoration-2'
-                    }
-                >
-                    Light Mode
-                </h1>
-                <div className="group-hover:underscore-hover h-[2px] w-0 bg-black" />
-            </button>
-            <button
-                onClick={() => setTheme('dark')}
-                className={clsx(
-                    'group w-fit text-white',
-                    loaded && theme === 'dark' && 'hidden'
-                )}
-            >
-                <h1
-                    className={
-                        'whitespace-nowrap decoration-black decoration-2'
-                    }
-                >
-                    Dark Mode
-                </h1>
-                <div className="group-hover:underscore-hover h-[2px] w-0 bg-white" />
-            </button>
+            <Button setTheme={setTheme} loaded={loaded} theme={theme} />
         </div>
+    )
+}
+
+function Button(props) {
+    console.log(props.theme)
+    return (
+        <button
+            onClick={() =>
+                props.setTheme(props.theme !== 'light' ? 'light' : 'dark')
+            }
+            className={clsx('group w-fit text-white')}
+        >
+            <div className={clsx('whitespace-nowrap capitalize')}>
+                <h1 className="text-white dark:text-black">
+                    {props.theme !== 'light' ? 'light' : 'dark'} Mode
+                </h1>
+                <div
+                    className={clsx(
+                        'group-hover:underscore-hover h-[2px] w-0',
+                        props.theme === 'light' ? 'bg-white' : 'bg-black'
+                    )}
+                />
+            </div>
+        </button>
     )
 }
