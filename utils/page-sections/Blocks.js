@@ -3,7 +3,7 @@ import DecreasingImageGrid from '../../components/organisms/Grids/DecreasingImag
 import Simple5050 from '../../components/organisms/Headers/Simple5050'
 import NoisyGradient5050Full from '../../components/organisms/Headers/NoisyGradient5050Full'
 import NoisyGradient5050Bordered from '../../components/organisms/Headers/NoisyGradient5050Bordered'
-import BlockNotShowing from '../BlockNotShowing'
+import BlockNotShowing from '../../components/molecules/BlockNotShowing'
 import SimpleHeader from '../../components/organisms/Headers/SimpleHeader'
 import MasonryImageGrid from '../../components/organisms/Grids/MasonryImageGrid'
 
