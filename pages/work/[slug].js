@@ -34,7 +34,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const data = await getWorkBySlug(params.slug)
     return {
         props: {
