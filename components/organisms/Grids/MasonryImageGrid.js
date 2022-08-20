@@ -45,7 +45,7 @@ export default function MasonryImageGrid(props) {
                             <Dialog.Portal>
                                 <Dialog.Overlay
                                     className={
-                                        'fixed inset-0 z-[130] bg-black bg-opacity-50'
+                                        'fixed inset-0 z-[130] bg-black bg-opacity-80'
                                     }
                                 />
                                 <Dialog.Content
@@ -59,8 +59,13 @@ export default function MasonryImageGrid(props) {
                                                 {image.title}
                                             </Dialog.Title>
                                         )}
-                                        <div className={'relative h-fit w-fit'}>
+                                        <div
+                                            className={
+                                                'relative flex h-fit w-full items-center justify-center'
+                                            }
+                                        >
                                             <img
+                                                className={'max-h-[90vh]'}
                                                 src={image.url}
                                                 alt={image.alt}
                                             />
