@@ -1,5 +1,5 @@
 // Data
-import Blocks from '../../utils/page-sections/individual-work'
+import Blocks from '../../utils/page-sections/Blocks'
 import { allWorkPages, getWorkBySlug } from '../../lib/API'
 
 // UI

@@ -16,7 +16,10 @@ export async function getStaticProps() {
 
 export default function Works({ data }) {
     return (
-        <BasicLayout title="Lab">
+        <BasicLayout
+            title="Lab"
+            desc="Check out some of my work going on behind the scenes..."
+        >
             <FilteredGrid data={data} title="Lab" type="lab" />
         </BasicLayout>
     )

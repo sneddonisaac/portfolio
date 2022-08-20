@@ -3,6 +3,8 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
+import { DefaultSeo } from 'next-seo'
+import { SEO } from '../seo.config'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -36,6 +38,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                 }
             `}
             </Script>
+            {/* default seo settings */}
+            <DefaultSeo {...SEO} />
             <Component {...pageProps} />
         </ThemeProvider>
     )
