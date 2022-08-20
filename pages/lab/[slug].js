@@ -1,10 +1,10 @@
 // Data
-import Blocks from '../../utils/page-sections/Blocks'
-import { allLabPages, getLabBySlug } from '../../lib/API'
+import Blocks from '@/utils/page-sections/Blocks'
+import { allLabPages, getLabBySlug } from '@/lib/API'
 
 // UI
-import ProjectHero from '../../components/organisms/Heros/ProjectHero'
-import ProjectLayout from '../../templates/ProjectLayout'
+import ProjectHero from '@/components/organisms/Heros/ProjectHero'
+import ProjectLayout from '@/templates/ProjectLayout'
 
 export default function Labs({ lab }) {
     return (

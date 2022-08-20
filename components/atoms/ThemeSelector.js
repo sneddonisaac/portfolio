@@ -1,5 +1,5 @@
 import { useTheme } from 'next-themes'
-import { useLoaded } from '../../utils/hooks/useLoaded'
+import { useLoaded } from '@/utils/hooks/useLoaded'
 import clsx from 'clsx'
 
 export default function ThemeSelector() {

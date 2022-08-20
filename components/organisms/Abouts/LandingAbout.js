@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 // UI
-import ImageWithCaption from '../../atoms/assets/ImageWithCaption'
+import ImageWithCaption from '@/components/atoms/assets/ImageWithCaption'
 
 export default function LandingAbout({ data }) {
     return (

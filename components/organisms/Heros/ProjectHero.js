@@ -1,6 +1,6 @@
-import projectTypeConverter from '../../../utils/functions/projectTypeConverter'
+import projectTypeConverter from '@/utils/functions/projectTypeConverter'
 import Link from 'next/link'
-import Container from '../../atoms/Container'
+import Container from '@/components/atoms/Container'
 import clsx from 'clsx'
 
 export default function ProjectHero(data) {

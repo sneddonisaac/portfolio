@@ -1,6 +1,6 @@
 import Container from '../../atoms/Container'
 import clsx from 'clsx'
-import NoiseBG from '../../molecules/NoiseBG'
+import NoiseBG from '@/components/molecules/NoiseBG'
 
 export default function NoisyGradient5050Full(props) {
     return (
