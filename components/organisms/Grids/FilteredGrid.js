@@ -16,8 +16,6 @@ export default function FilteredGrid({ data, title, type }) {
     let state = false
     state = data.length % 2 !== 0
 
-    console.log(filteredData)
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         let tempData = []
@@ -29,12 +27,10 @@ export default function FilteredGrid({ data, title, type }) {
             data.filter((filter) => {
                 filter.projectType.forEach((item) => {
                     if (item === value) {
-                        console.log(item, value, filter)
                         tempData.push(filter)
                     }
                 })
             })
-            console.log(tempData)
             setFilteredData([...new Set(tempData)])
             state = data.length % 2 !== 0
         }
