@@ -8,7 +8,7 @@ import ProjectLayout from '@/templates/ProjectLayout'
 
 export default function Labs({ lab }) {
     return (
-        <ProjectLayout title={lab?.title} data={lab}>
+        <ProjectLayout title={lab?.title} data={lab} type="lab">
             <ProjectHero {...lab} />
             {lab?.content ? (
                 lab.content.map((component, index) => (

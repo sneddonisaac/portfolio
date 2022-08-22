@@ -2,17 +2,17 @@ import Container from '@/components/atoms/Container'
 import Link from 'next/link'
 import NoiseBG from '@/components/molecules/NoiseBG'
 
-export default function RelatedProject(props) {
+export default function RelatedProject({ data, type }) {
     return (
-        <Link href={`/work/${props?.slug}`}>
+        <Link href={`/${type}/${data?.slug}`}>
             <a>
                 <NoiseBG gradient="light-gradient-bg" classNames="text-white">
                     <Container>
                         <div className="group flex flex-col items-center justify-center space-y-12 py-12">
                             <div className="text-center">
-                                <span>{props?.client}</span>
+                                <span>{data?.client}</span>
                                 <h1 className="font-satoshi-bold text-6xl">
-                                    {props?.title}
+                                    {data?.title}
                                 </h1>
                             </div>
 
