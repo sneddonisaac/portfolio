@@ -16,16 +16,26 @@ export default function FilteredGrid({ data, title, type }) {
     let state = false
     state = data.length % 2 !== 0
 
+    console.log(filteredData)
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
+        let tempData = []
         if (value === 'all') {
             setFilteredData(data)
             // eslint-disable-next-line react-hooks/exhaustive-deps
             state = data.length % 2 !== 0
         } else {
-            setFilteredData(
-                data.filter((filter) => filter.projectType[0] === value)
-            )
+            data.filter((filter) => {
+                filter.projectType.forEach((item) => {
+                    if (item === value) {
+                        console.log(item, value, filter)
+                        tempData.push(filter)
+                    }
+                })
+            })
+            console.log(tempData)
+            setFilteredData([...new Set(tempData)])
             state = data.length % 2 !== 0
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -56,7 +66,7 @@ function Card({ item, index, type }) {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 1, ease: 'easeInOut' }}
             className={clsx(
-                'col-span-1 row-span-2 h-fit w-full overflow-hidden border-2 border-b-0 border-black py-[3vw] last:border-b-2 odd:border-r-0 odd:border-l-0 even:border-l-0 even:border-r-0 dark:border-white sm:p-[1vw] sm:odd:border-r-[1px] sm:odd:border-l-2 sm:odd:last:border-r-2 sm:even:border-r-2 sm:even:border-l-[1px] sm:odd:second-last-child:border-b-2',
+                'col-span-1 row-span-2 h-fit w-full overflow-hidden border-2 border-b-0 border-black py-[3vw] last:border-b-2 odd:border-r-0 odd:border-l-0 even:border-l-0 even:border-r-0 dark:border-white sm:p-[1vw] sm:odd:border-r-[1px] sm:odd:border-l-2 sm:odd:last:border-r-2 sm:even:border-r-2 sm:even:border-l-[1px] sm:second-last-child:border-b-2',
                 index && 'sm:odd:last:col-span-2 sm:odd:last:row-span-2'
             )}
         >
@@ -73,7 +83,7 @@ function Card({ item, index, type }) {
                         <>
                             <BasicImage
                                 data={item?.projectImage}
-                                className="aspect-[41/26] h-full w-full object-cover"
+                                className="aspect-[41/26] h-full w-full overflow-hidden object-cover"
                             />
                         </>
                     ) : (
@@ -112,7 +122,9 @@ function Header({ props, projects, value, setValue, title }) {
     let options = [{ title: 'All', slug: 'all' }]
 
     props.forEach((item) => {
-        types.push(item.projectType[0])
+        item.projectType.forEach((i) => {
+            types.push(i)
+        })
     })
 
     let uniqueTypes = [...new Set(types)]
