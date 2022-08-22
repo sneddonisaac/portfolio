@@ -10,6 +10,9 @@ export default function projectTypeConverter(params) {
         case 'web_app':
             result.title = 'Web App'
             break
+        case 'consulting':
+            result.title = 'Consulting'
+            break
     }
     return result
 }

@@ -77,7 +77,9 @@ export default function MasonryImageGrid(props) {
                                                 }
                                             >
                                                 <Cross1Icon
-                                                    className={'h-8 w-8'}
+                                                    className={
+                                                        'h-8 w-8 text-white dark:text-white'
+                                                    }
                                                 />
                                             </Dialog.Close>
                                         </div>
