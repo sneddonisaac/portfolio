@@ -1,9 +1,9 @@
 // Data
-import { getFeaturedWork, getLandingPage } from '@/lib/API'
+import { getFeaturedWork, getLandingPage } from '@/lib/cms'
 
 // UI
-import BasicLayout from '@/templates/BasicLayout'
-import LandingHero from '@/components/organisms/Heros/LandingHero'
+import BasicLayout from '@/components/templates/BasicLayout'
+import LandingHero from '@/components/blocks/Heros/LandingHero'
 import Components from '@/utils/page-sections/landing-page'
 
 export async function getStaticProps() {

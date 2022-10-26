@@ -1,9 +1,9 @@
 // Data
-import { allLabPages } from '@/lib/API'
+import { allLabPages } from '@/lib/cms'
 
 // UI
-import BasicLayout from '@/templates/BasicLayout'
-import FilteredGrid from '@/components/organisms/Grids/FilteredGrid'
+import BasicLayout from '@/components/templates/BasicLayout'
+import FilteredGrid from '@/components/blocks/Grids/FilteredGrid'
 
 export async function getStaticProps() {
     const data = await allLabPages()

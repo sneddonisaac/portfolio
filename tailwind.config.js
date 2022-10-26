@@ -18,19 +18,20 @@ module.exports = {
                 white: '#fdffff',
             },
             gridTemplateRows: {
-                '7': 'repeat(7, minmax(0, 1fr))',
+                7: 'repeat(7, minmax(0, 1fr))',
             },
             gridTemplateColumns: {
-                '7': 'repeat(7, minmax(0, 1fr))',
+                7: 'repeat(7, minmax(0, 1fr))',
             },
         },
     },
     plugins: [
         require('@tailwindcss/typography'),
-        plugin(function({ addVariant }) {
+        require('@tailwindcss/forms'),
+        plugin(function ({ addVariant }) {
             addVariant('second-last-child', '&:nth-last-child(2)')
             addVariant('third-last-child', '&:nth-last-child(3)')
             addVariant('hocus', ['&:hover', '&:focus'])
-        })
+        }),
     ],
 }
