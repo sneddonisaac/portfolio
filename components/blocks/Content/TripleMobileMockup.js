@@ -43,7 +43,7 @@ function DeviceImage({ data }) {
             <picture className="z-10 h-full overflow-hidden object-cover object-center">
                 <img
                     className="z-10 h-full overflow-hidden object-cover object-center"
-                    src="/public/device-iphone13-nonotch.png"
+                    src="/device-iphone13-nonotch.png"
                     alt="iphone 13 no notch"
                 />
             </picture>

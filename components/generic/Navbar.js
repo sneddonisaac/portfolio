@@ -17,7 +17,7 @@ export default function Navbar() {
             className="fixed z-[120] h-fit w-full bg-transparent font-satoshi-regular"
         >
             <div className="flex items-center justify-between px-5 pt-12 font-satoshi-bold text-5xl sm:px-20">
-                <Link href="/pages">
+                <Link href="/">
                     <a className="">Isaac.</a>
                 </Link>
                 <HamburgerMenu />
