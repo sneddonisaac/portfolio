@@ -15,7 +15,7 @@ export default function LetsChatForm() {
     const submitForm = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch('http://localhost:3000/api/contact-form', {
+            const res = await fetch('/api/contact-form', {
                 method: 'POST',
                 body: JSON.stringify({ name, email, phone, message, created }),
             })
