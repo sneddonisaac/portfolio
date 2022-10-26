@@ -7,6 +7,7 @@ const nav = [
     { title: 'Main', path: '/' },
     { title: 'Work', path: '/work' },
     { title: 'Lab', path: '/lab' },
+    { title: 'Chat', path: '/lets-chat' },
 ]
 
 export default function Navbar() {

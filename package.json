@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.1",
     "@radix-ui/react-dialog": "^1.0.0",
     "@radix-ui/react-icons": "^1.1.0",
     "@radix-ui/react-progress": "^0.1.4",
