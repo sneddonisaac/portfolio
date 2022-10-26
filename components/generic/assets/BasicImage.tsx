@@ -1,4 +1,4 @@
-import ImageTypes from '@/types/ImageTypes'
+import { ImageTypes } from '../../../types/ImageTypes'
 
 type Props = {
     className?: string

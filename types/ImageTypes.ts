@@ -7,4 +7,4 @@ type ImageTypes = {
     caption?: string
 }
 
-export default ImageTypes;
+export type { ImageTypes }
