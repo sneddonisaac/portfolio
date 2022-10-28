@@ -11,6 +11,7 @@ const nav = [
 
 export default function Navbar() {
     const router = useRouter()
+    console.log(router.pathname.split('/')[1])
     return (
         <div
             id="Navbar"
@@ -21,7 +22,10 @@ export default function Navbar() {
                     <Link key={index} href={item.path}>
                         <a
                             className={`cursor-pointer uppercase decoration-2 underline-offset-4 ${
-                                router.pathname === item.path ? 'underline' : ''
+                                `/${router.pathname.split('/')[1]}` ===
+                                item.path
+                                    ? 'underline'
+                                    : ''
                             }`}
                         >
                             {item.title}
