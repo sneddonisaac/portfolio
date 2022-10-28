@@ -1,12 +1,9 @@
 import { useTheme } from 'next-themes'
-import { useLoaded } from '@/utils/hooks/useLoaded'
-import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 
 export default function ThemeSelector() {
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
-    const loaded = useLoaded()
 
     useEffect(() => {
         setMounted(true)
@@ -16,21 +13,13 @@ export default function ThemeSelector() {
         return null
     }
 
-    return <Button setTheme={setTheme} loaded={loaded} theme={theme} />
-}
-
-function Button(props) {
     return (
         <button
-            onClick={() =>
-                props.setTheme(props.theme !== 'light' ? 'light' : 'dark')
-            }
-            className={clsx(
-                'group fixed bottom-8 right-8 z-[130] flex aspect-square h-12 w-12 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white'
-            )}
+            onClick={() => setTheme(theme !== 'light' ? 'light' : 'dark')}
+            className="group fixed bottom-8 right-8 z-[130] flex aspect-square h-10 w-10 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white"
         >
             <div className="flex items-center justify-center text-white dark:text-black">
-                {props.theme !== 'light' ? <SunIcon /> : <MoonIcon />}
+                {theme !== 'light' ? <SunIcon /> : <MoonIcon />}
             </div>
         </button>
     )
