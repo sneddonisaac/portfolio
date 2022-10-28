@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import ThemeSelector from './ThemeSelector'
 
 const nav = [
     { title: 'Main', path: '/' },
@@ -28,6 +29,7 @@ export default function Navbar() {
                     </Link>
                 ))}
             </div>
+            <ThemeSelector />
         </div>
     )
 }
