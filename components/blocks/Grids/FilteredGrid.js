@@ -143,7 +143,7 @@ function Header({ props, projects, value, setValue, title }) {
             </div>
             <div className="w-full space-y-2 py-4 font-satoshi-bold sm:w-fit">
                 <select
-                    className="w-full bg-white text-center text-black dark:bg-black dark:text-white sm:w-fit"
+                    className="w-full bg-white text-left text-black dark:bg-black dark:text-white sm:w-fit"
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 >

@@ -1,15 +1,15 @@
 import Container from '@/components/generic/Container'
 import Link from 'next/link'
 
-export default function NewProjectChat() {
+export default function LetsTalk() {
     return (
-        <div className="my-16 h-fit w-full">
+        <div id="Let's Talk CTA" className="my-16 h-fit w-full">
             <Container classname="justify-center items-center flex">
-                <div className="flex w-3/4 flex-col items-center justify-center text-center">
-                    <h1 className="mb-10 font-satoshi-bold text-6xl">
+                <div className="flex w-full flex-col items-center justify-center text-center sm:w-3/4">
+                    <h1 className="mb-10 font-satoshi-bold text-4xl sm:text-6xl">
                         I occasionally take on freelance opportunities.
                     </h1>
-                    <p className="w-3/4 text-center text-xl">
+                    <p className="w-full text-center sm:w-3/4 sm:text-xl">
                         Have an exciting project where you need some help? Send
                         me over a message, and{' '}
                         <Link href="/lets-chat">

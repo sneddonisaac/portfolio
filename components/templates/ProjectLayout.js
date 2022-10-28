@@ -1,8 +1,8 @@
 import Navbar from '@/components/generic/Navbar'
 import Footer from '@/components/generic/Footer'
-import RelatedProject from '@/components/blocks/RelatedProject'
+import RelatedProject from '@/components/blocks/CTA/RelatedProject'
 import SEO from '@/components/generic/SEO'
-import ThemeSelector from '@/components/generic/ThemeSelector'
+import Header from '../generic/Header'
 
 export default function ProjectLayout({ children, data, type }) {
     return (
@@ -12,7 +12,7 @@ export default function ProjectLayout({ children, data, type }) {
                 id="ProjectLayout"
                 className="relative h-full min-h-screen font-satoshi-regular"
             >
-                <Navbar />
+                <Header />
                 <main className="relative min-h-[90vh]">
                     {children}
                     {data?.relatedProject && (
@@ -23,7 +23,7 @@ export default function ProjectLayout({ children, data, type }) {
                     )}
                 </main>
                 <Footer />
-                <ThemeSelector />
+                <Navbar />
             </div>
         </>
     )
