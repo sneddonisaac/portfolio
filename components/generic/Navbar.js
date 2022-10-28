@@ -11,7 +11,6 @@ const nav = [
 
 export default function Navbar() {
     const router = useRouter()
-    console.log(router.pathname.split('/')[1])
     return (
         <div
             id="Navbar"
