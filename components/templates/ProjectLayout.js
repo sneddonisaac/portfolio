@@ -1,6 +1,6 @@
 import Navbar from '@/components/generic/Navbar'
 import Footer from '@/components/generic/Footer'
-import RelatedProject from '@/components/blocks/RelatedProject'
+import RelatedProject from '@/components/blocks/CTA/RelatedProject'
 import SEO from '@/components/generic/SEO'
 import ThemeSelector from '@/components/generic/ThemeSelector'
 
