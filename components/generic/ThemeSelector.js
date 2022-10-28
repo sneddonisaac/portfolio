@@ -9,7 +9,6 @@ export default function ThemeSelector() {
     const loaded = useLoaded()
 
     useEffect(() => {
-        setTheme(localStorage.theme)
         setMounted(true)
     }, [])
 
