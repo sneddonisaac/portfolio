@@ -16,7 +16,7 @@ export default function ThemeSelector() {
     return (
         <button
             onClick={() => setTheme(theme !== 'light' ? 'light' : 'dark')}
-            className="group fixed bottom-6 right-6 z-[130] flex aspect-square h-10 w-10 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white sm:bottom-8 sm:right-8"
+            className="group flex aspect-square h-11 w-11 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white sm:bottom-8 sm:right-8"
         >
             <div className="flex items-center justify-center text-white dark:text-black">
                 {theme !== 'light' ? <SunIcon /> : <MoonIcon />}
