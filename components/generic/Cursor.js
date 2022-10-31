@@ -1,5 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowTopRightIcon, ImageIcon, SwitchIcon } from '@radix-ui/react-icons'
+import {
+    ArrowRightIcon,
+    ArrowTopRightIcon,
+    HomeIcon,
+    ImageIcon,
+    OpenInNewWindowIcon,
+    Share1Icon,
+    SwitchIcon,
+} from '@radix-ui/react-icons'
 
 export default function Cursor() {
     const ref = useRef(null)
@@ -32,6 +40,14 @@ export default function Cursor() {
                     return ImageIcon
                 case 'switch':
                     return SwitchIcon
+                case 'next':
+                    return ArrowRightIcon
+                case 'social':
+                    return Share1Icon
+                case 'home':
+                    return HomeIcon
+                case 'new-window':
+                    return OpenInNewWindowIcon
                 default:
                     return ArrowTopRightIcon
             }
@@ -52,7 +68,11 @@ export default function Cursor() {
     }, [])
 
     return (
-        <div className="bg-black dark:bg-white" id="cursor" ref={ref}>
+        <div
+            className="hidden bg-black dark:bg-white md:flex"
+            id="cursor"
+            ref={ref}
+        >
             <Icon
                 id="cursor-icon"
                 className="h-auto w-1/2 text-white dark:text-black"

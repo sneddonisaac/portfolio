@@ -38,7 +38,7 @@ export default function Footer() {
                                 <Link key={index} href={social.href}>
                                     <a
                                         id="interactable"
-                                        data-type="link"
+                                        data-type="social"
                                         className="group w-fit"
                                         target="_blank"
                                         rel="noreferrer noopener"
