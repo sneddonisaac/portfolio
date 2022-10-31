@@ -32,11 +32,13 @@ body, html {
     transition: opacity 500ms ease;
 }
 
-#cursor:not([data-type=""]) > #cursor-icon {
-    opacity: 1;
+@media only screen and (min-width: 600px) {
+    #layout:hover > #cursor {
+        opacity: 1;
+    }
 }
 
-#layout:hover > #cursor {
+#cursor:not([data-type=""]) > #cursor-icon {
     opacity: 1;
 }
 

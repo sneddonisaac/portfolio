@@ -68,11 +68,7 @@ export default function Cursor() {
     }, [])
 
     return (
-        <div
-            className="hidden bg-black dark:bg-white md:flex"
-            id="cursor"
-            ref={ref}
-        >
+        <div className="bg-black dark:bg-white" id="cursor" ref={ref}>
             <Icon
                 id="cursor-icon"
                 className="h-auto w-1/2 text-white dark:text-black"
