@@ -29,7 +29,12 @@ export default function MasonryImageGrid(props) {
                     <div key={image.id} className={'relative last:mb-0'}>
                         <Dialog.Root>
                             <Dialog.Trigger>
-                                <img src={image.url} alt={image.alt} />
+                                <img
+                                    src={image.url}
+                                    alt={image.alt}
+                                    id="interactable"
+                                    data-type="image"
+                                />
                                 {image.title && (
                                     <div
                                         className={
