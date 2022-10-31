@@ -29,6 +29,8 @@ function MenuBar() {
             {nav.map((item, index) => (
                 <Link key={index} href={item.path}>
                     <a
+                        id="interactable"
+                        datatype="link"
                         className={`cursor-pointer uppercase decoration-2 underline-offset-4 ${
                             `/${router.pathname.split('/')[1]}` === item.path
                                 ? 'underline'

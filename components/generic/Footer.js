@@ -37,6 +37,8 @@ export default function Footer() {
                             {socials.map((social, index) => (
                                 <Link key={index} href={social.href}>
                                     <a
+                                        id="interactable"
+                                        data-type="social"
                                         className="group w-fit"
                                         target="_blank"
                                         rel="noreferrer noopener"
