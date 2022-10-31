@@ -5,7 +5,7 @@ import NoiseBG from '@/components/generic/NoiseBG'
 export default function RelatedProject({ data, type }) {
     return (
         <Link href={`/${type}/${data?.slug}`}>
-            <a>
+            <a id="interactable" data-type="link">
                 <NoiseBG gradient="light-gradient-bg" classNames="text-white">
                     <Container>
                         <div className="group flex flex-col items-center justify-center space-y-12 py-12">

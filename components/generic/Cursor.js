@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowTopRightIcon, ImageIcon } from '@radix-ui/react-icons'
+import { ArrowTopRightIcon, ImageIcon, SwitchIcon } from '@radix-ui/react-icons'
 
 export default function Cursor() {
     const ref = useRef(null)
@@ -30,6 +30,8 @@ export default function Cursor() {
             switch (type) {
                 case 'image':
                     return ImageIcon
+                case 'switch':
+                    return SwitchIcon
                 default:
                     return ArrowTopRightIcon
             }

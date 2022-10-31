@@ -39,7 +39,7 @@ function WorkItem({ title, description, projectTags, slug }) {
                     <Link href={`/work/${slug}`}>
                         <a
                             id="interactable"
-                            datatype="link"
+                            data-type="link"
                             className="group hidden whitespace-nowrap font-satoshi-bold lg:block"
                         >
                             Learn More
@@ -52,7 +52,7 @@ function WorkItem({ title, description, projectTags, slug }) {
                 <Link href={`/work/${slug}`}>
                     <a
                         id="interactable"
-                        datatype="link"
+                        data-type="link"
                         className="group font-satoshi-bold sm:hidden"
                     >
                         Learn More
