@@ -30,7 +30,7 @@ export async function getStaticPaths() {
     const works = await allWorkPages()
     return {
         paths: works?.map((work) => `/work/${work.slug}`) || [],
-        fallback: true,
+        fallback: false,
     }
 }
 
