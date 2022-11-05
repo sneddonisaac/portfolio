@@ -121,7 +121,7 @@ html {
     #scroll {
         display: flex;
         position: relative;
-        height: 4.5rem;
+        height: min-content;
         z-index: 1;
         width: 75%;
         margin: auto;
