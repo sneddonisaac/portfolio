@@ -10,7 +10,11 @@ export default function NoisyGradient5050Bordered(props) {
     return (
         <div id={`block_name: ${props?.__typename}, block_id: ${props?.id}`}>
             <Container>
-                <NoiseBG classNames="text-white">
+                <NoiseBG
+                    classNames="text-white"
+                    canvas={false}
+                    gradientType="light-gradient-bg"
+                >
                     <div className="z-10 grid h-fit auto-rows-[_0.5fr] place-content-center gap-16 py-12 px-16 text-center text-white text-white sm:grid-cols-3 sm:text-left">
                         <h1
                             className={clsx(
