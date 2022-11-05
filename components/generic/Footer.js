@@ -15,19 +15,24 @@ export default function Footer() {
     setInterval(getDate, 10000)
 
     return (
-        <footer className="flex w-full flex-col items-center justify-between bg-black pb-6 text-white">
+        <footer className="flex w-full flex-col items-center justify-between bg-black pb-12 text-white sm:pb-6">
             <Container>
-                <div className="grid w-full gap-y-8 md:grid-cols-5 lg:grid-cols-6">
+                <div className="grid w-full gap-x-4 gap-y-8 md:grid-cols-5 lg:grid-cols-6">
                     <div className="col-span-2 grid grid-flow-col grid-rows-1">
                         <div className="text-center sm:text-left">
                             <h1 className="text-sm text-gray-500">Version</h1>
                             <span>{year} &copy; Edition</span>
                         </div>
-                        <div>
+                        <div className="text-center sm:text-left">
                             <h1 className="text-sm text-gray-500">
                                 Local Time
                             </h1>
-                            {date} {timezone}
+                            <div className="flex justify-center sm:justify-start">
+                                <span>{date}</span>
+                                <span className="hidden sm:block">
+                                    &nbsp;{timezone}
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div className="hidden sm:block md:col-span-1 lg:col-span-2" />
@@ -52,7 +57,9 @@ export default function Footer() {
                     </div>
                 </div>
             </Container>
-            <div className="pt-10">By Isaac Sneddon-Jenkins</div>
+            <div className="hidden pt-0 sm:block sm:pt-10">
+                By Isaac Sneddon-Jenkins
+            </div>
         </footer>
     )
 }
