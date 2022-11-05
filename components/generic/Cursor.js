@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import {
     ArrowRightIcon,
     ArrowTopRightIcon,
+    CheckIcon,
     HomeIcon,
     ImageIcon,
     OpenInNewWindowIcon,
@@ -48,6 +49,8 @@ export default function Cursor() {
                     return HomeIcon
                 case 'new-window':
                     return OpenInNewWindowIcon
+                case 'submit':
+                    return CheckIcon
                 default:
                     return ArrowTopRightIcon
             }
