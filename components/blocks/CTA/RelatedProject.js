@@ -11,11 +11,7 @@ export default function RelatedProject({ data, type }) {
         <div id="Related Project">
             <Link href={`/${type}/${data?.slug}`}>
                 <a rel="preload" id="interactable" data-type="next">
-                    <NoiseBG
-                        gradientType="light-gradient-bg"
-                        classNames="text-white"
-                        canvas={false}
-                    >
+                    <NoiseBG classNames="text-white">
                         <Container>
                             <div className="group flex flex-col items-center justify-center space-y-12 py-12">
                                 <div className="text-center">
