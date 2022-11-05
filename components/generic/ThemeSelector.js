@@ -11,6 +11,7 @@ export default function ThemeSelector() {
 
     if (!mounted) {
         return null
+    } else {
     }
 
     return (
