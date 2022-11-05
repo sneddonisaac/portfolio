@@ -76,6 +76,7 @@ export default function LetsChatForm() {
             <InputWLabel label="Message *">
                 <textarea
                     className="w-full border border-2 py-3 px-3 dark:bg-black"
+                    required
                     rows={6}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

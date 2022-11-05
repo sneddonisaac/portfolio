@@ -3,6 +3,7 @@ import {
     ArrowRightIcon,
     ArrowTopRightIcon,
     CheckIcon,
+    CursorTextIcon,
     HomeIcon,
     ImageIcon,
     OpenInNewWindowIcon,
@@ -51,6 +52,8 @@ export default function Cursor() {
                     return OpenInNewWindowIcon
                 case 'submit':
                     return CheckIcon
+                case 'input':
+                    return CursorTextIcon
                 default:
                     return ArrowTopRightIcon
             }
@@ -71,7 +74,11 @@ export default function Cursor() {
     }, [])
 
     return (
-        <div className="bg-black dark:bg-white" id="cursor" ref={ref}>
+        <div
+            className="border-2 border-black bg-black bg-opacity-60 dark:border-white dark:bg-white dark:bg-opacity-60"
+            id="cursor"
+            ref={ref}
+        >
             <Icon
                 id="cursor-icon"
                 className="h-auto w-1/2 text-white dark:text-black"
