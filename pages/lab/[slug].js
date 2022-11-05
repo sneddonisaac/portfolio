@@ -30,7 +30,7 @@ export async function getStaticPaths() {
     const data = await allLabPages()
     return {
         paths: data?.map((lab) => `/lab/${lab.slug}`) || [],
-        fallback: true,
+        fallback: false,
     }
 }
 
