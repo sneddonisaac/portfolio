@@ -224,7 +224,7 @@ class MiniGl {
                             if (uniform.excludeFrom !== type) {
                                 if ('array' === uniform.type)
                                     return (
-                                        uniform.value[0].getDeclaration(
+                                        uniform.value[0]?.getDeclaration(
                                             name,
                                             type,
                                             uniform.value.length

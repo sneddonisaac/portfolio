@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import BasicImage from '@/components/generic/assets/BasicImage'
 import { Gradient } from './assets/Gradient.js'
+import { useLoaded } from '../../utils/hooks/useLoaded'
 
 export default function NoiseBG({
     children,
@@ -8,8 +9,12 @@ export default function NoiseBG({
     classNames,
     canvas = true,
 }) {
-    const gradient = new Gradient()
-    gradient.initGradient(`#gradient-canvas`)
+    const loaded = useLoaded()
+
+    if (loaded) {
+        const gradient = new Gradient()
+        gradient.initGradient(`#gradient-canvas`)
+    }
 
     return canvas ? (
         <div
@@ -22,6 +27,7 @@ export default function NoiseBG({
                 data-transition-in
                 className="noise-bg absolute inset-0 z-0"
             />
+
             <div className="relative">{children}</div>
         </div>
     ) : (

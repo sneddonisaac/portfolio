@@ -10,7 +10,7 @@ export default function RelatedProject({ data, type }) {
     return (
         <div id="Related Project">
             <Link href={`/${type}/${data?.slug}`}>
-                <a id="interactable" data-type="next">
+                <a rel="preload" id="interactable" data-type="next">
                     <NoiseBG
                         gradientType="light-gradient-bg"
                         classNames="text-white"
