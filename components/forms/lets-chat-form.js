@@ -82,6 +82,8 @@ export default function LetsChatForm() {
                 />
             </InputWLabel>
             <button
+                id="interactable"
+                data-type="submit"
                 onClick={() => {
                     setCreated(new Date())
                 }}

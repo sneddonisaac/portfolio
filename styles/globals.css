@@ -30,10 +30,13 @@ body, html {
     pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
+}
 
+
+/* #cursor {
     filter: invert(1);
     mix-blend-mode: difference;
-}
+} */
 
 @media only screen and (min-width: 600px) {
     #layout:hover > #cursor {
