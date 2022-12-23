@@ -5,8 +5,6 @@ import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import { DefaultSeo } from 'next-seo'
 import { SEO } from 'seo.config'
-import { DevSupport } from '@react-buddy/ide-toolbox'
-import { ComponentPreviews, useInitial } from '../dev'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -44,12 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Script>
             {/* default seo settings */}
             <DefaultSeo {...SEO} />
-            <DevSupport
-                ComponentPreviews={ComponentPreviews}
-                useInitialHook={useInitial}
-            >
-                <Component {...pageProps} />
-            </DevSupport>
+            <Component {...pageProps} />
         </ThemeProvider>
     )
 }
