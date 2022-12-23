@@ -27,14 +27,13 @@ export default function ErrorPage() {
             </div>
             <p className="-mt-16 text-center text-3xl">
                 It looks like you are lost,{' '}
-                <Link href="/">
-                    <a
-                        id="interactable"
-                        data-type="home"
-                        className="decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
-                    >
-                        let&apos;s get you back.
-                    </a>
+                <Link
+                    href="/"
+                    id="interactable"
+                    data-type="home"
+                    className="decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
+                >
+                    let&apos;s get you back.
                 </Link>
             </p>
         </BasicLayout>

@@ -2,6 +2,7 @@ import Masonry from 'react-masonry-css'
 import Container from '@/components/generic/Container'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross1Icon } from '@radix-ui/react-icons'
+import Image from 'next/image'
 
 const breakpointColumnsObj = {
     default: 4,
@@ -29,9 +30,11 @@ export default function MasonryImageGrid(props) {
                     <div key={image.id} className={'relative last:mb-0'}>
                         <Dialog.Root>
                             <Dialog.Trigger>
-                                <img
+                                <Image
                                     src={image.url}
                                     alt={image.alt}
+                                    width={image.width}
+                                    height={image.height}
                                     id="interactable"
                                     data-type="image"
                                 />

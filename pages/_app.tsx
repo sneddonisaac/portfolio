@@ -11,10 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider attribute="class" defaultTheme="system">
             {/* Google tag (gtag.js) */}
             <Script
-                strategy="lazyOnload"
+                strategy="worker"
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
             />
-            <Script strategy="lazyOnload">
+            <Script strategy="worker">
                 {`
                       window.dataLayer = window.dataLayer || [];
                       function gtag(){dataLayer.push(arguments);}
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Script>
             {/* default seo settings */}
             <DefaultSeo {...SEO} />
-                <Component {...pageProps} />
+            <Component {...pageProps} />
         </ThemeProvider>
     )
 }

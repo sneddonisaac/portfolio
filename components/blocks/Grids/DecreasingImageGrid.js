@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 // UI
 import Container from '@/components/generic/Container'
+import Image from 'next/image'
 
 export default function DecreasingImageGrid(data) {
     return (
@@ -46,17 +47,17 @@ export default function DecreasingImageGrid(data) {
 
 function Img({ data, styles }) {
     return (
-        <picture
+        <div
             id={data?.id}
             className={`${styles} h-full w-full overflow-clip border-2 md:border-0`}
         >
-            <img
+            <Image
                 className="h-full object-cover object-center lg:object-contain"
                 src={data.url}
                 width={data.width}
                 height={data.height}
                 alt={data.fileName}
             />
-        </picture>
+        </div>
     )
 }

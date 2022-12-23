@@ -12,14 +12,13 @@ export default function LetsTalk() {
                     <p className="w-full text-center sm:w-3/4 sm:text-xl">
                         Have an exciting project where you need some help? Send
                         me over a message, and{' '}
-                        <Link href="/lets-chat">
-                            <a
-                                id="interactable"
-                                data-type="link"
-                                className="decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
-                            >
-                                let&apos;s chat.
-                            </a>
+                        <Link
+                            href="/lets-chat"
+                            id="interactable"
+                            data-type="link"
+                            className="decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
+                        >
+                            let&apos;s chat.
                         </Link>
                     </p>
                 </div>

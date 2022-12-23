@@ -66,31 +66,30 @@ function Card({ item, index, type }) {
                 index && 'sm:odd:last:col-span-2 sm:odd:last:row-span-2'
             )}
         >
-            <Link href={`/${type}/${item?.slug}`}>
-                <a
-                    id="interactable"
-                    data-type="link"
-                    className={clsx(
-                        'flex h-fit w-full flex-col',
-                        !item?.projectImage
-                            ? 'items-end justify-end'
-                            : 'items-center justify-center'
-                    )}
-                >
-                    {item.projectImage ? (
-                        <>
-                            <BasicImage
-                                data={item?.projectImage}
-                                className="aspect-[41/26] h-full w-full overflow-hidden object-cover"
-                            />
-                        </>
-                    ) : (
-                        <span className="flex aspect-[41/26] h-full w-full items-center justify-center">
-                            No Image Available
-                        </span>
-                    )}
-                    <CardDetails {...item} />
-                </a>
+            <Link
+                href={`/${type}/${item?.slug}`}
+                id="interactable"
+                data-type="link"
+                className={clsx(
+                    'flex h-fit w-full flex-col',
+                    !item?.projectImage
+                        ? 'items-end justify-end'
+                        : 'items-center justify-center'
+                )}
+            >
+                {item.projectImage ? (
+                    <>
+                        <BasicImage
+                            data={item?.projectImage}
+                            className="aspect-[41/26] h-full w-full overflow-hidden object-cover"
+                        />
+                    </>
+                ) : (
+                    <span className="flex aspect-[41/26] h-full w-full items-center justify-center">
+                        No Image Available
+                    </span>
+                )}
+                <CardDetails {...item} />
             </Link>
         </motion.div>
     )

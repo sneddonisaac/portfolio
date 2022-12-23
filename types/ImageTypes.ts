@@ -2,8 +2,8 @@ type ImageTypes = {
     id: string
     url: string
     alt: string
-    height: string | number
-    width: string | number
+    height: number
+    width: number
     caption?: string
 }
 

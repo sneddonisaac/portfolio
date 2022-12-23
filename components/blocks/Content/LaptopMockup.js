@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function LaptopMockup({ data }) {
     return (
         <div className="px-8 pb-20">
@@ -25,7 +27,7 @@ function DeviceImage(props) {
         >
             <FeaturedImage {...props} />
             <picture className="absolute inset-0 z-10 h-full w-full overflow-hidden object-contain object-center">
-                <img
+                <Image
                     className="z-10 h-full overflow-hidden object-cover object-center"
                     src="/public/device-mbp-15.png"
                     alt="iphone 13 no notch"

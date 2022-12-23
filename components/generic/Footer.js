@@ -40,17 +40,17 @@ export default function Footer() {
                         <h1 className="text-sm text-gray-500">Socials</h1>
                         <div className="grid grid-flow-col grid-rows-1 place-items-center gap-x-8 sm:place-items-start">
                             {socials.map((social, index) => (
-                                <Link key={index} href={social.href}>
-                                    <a
-                                        id="interactable"
-                                        data-type="social"
-                                        className="group w-fit"
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                    >
-                                        <h4>{social.name}</h4>
-                                        <div className="group-hover:underscore-hover h-[2px] w-0 bg-white" />
-                                    </a>
+                                <Link
+                                    key={index}
+                                    href={social.href}
+                                    id="interactable"
+                                    data-type="social"
+                                    className="group w-fit"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    <h4>{social.name}</h4>
+                                    <div className="group-hover:underscore-hover h-[2px] w-0 bg-white" />
                                 </Link>
                             ))}
                         </div>

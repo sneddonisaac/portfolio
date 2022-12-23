@@ -1,4 +1,5 @@
 import { ImageTypes } from '../../../types/ImageTypes'
+import Image from 'next/image'
 
 type Props = {
     className?: string
@@ -7,15 +8,13 @@ type Props = {
 
 export default function BasicImage({ data, className }: Props) {
     return (
-        <picture>
-            <img
-                className={className}
-                src={data.url}
-                alt={data.alt}
-                width={data.width}
-                height={data.height}
-                id={data.id}
-            />
-        </picture>
+        <Image
+            className={className}
+            src={data.url}
+            alt={data.alt}
+            width={data.width}
+            height={data.height}
+            id={data.id}
+        />
     )
 }

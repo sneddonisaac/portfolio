@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image'
 import Container from '@/components/generic/Container'
 
 export default function TripleMobileMockup(data) {
@@ -40,13 +40,13 @@ function DeviceImage({ data }) {
             ) : (
                 <FeaturedImage image={data.image} />
             )}
-            <picture className="z-10 h-full overflow-hidden object-cover object-center">
-                <img
+            <div className="z-10 h-full overflow-hidden object-cover object-center">
+                <Image
                     className="z-10 h-full overflow-hidden object-cover object-center"
                     src="/device-iphone13-nonotch.png"
                     alt="iphone 13 no notch"
                 />
-            </picture>
+            </div>
         </div>
     )
 }
@@ -60,7 +60,6 @@ function FeaturedImage({ image }) {
             <Image
                 className="h-full overflow-clip rounded-[10%/5%] object-cover object-center"
                 src={image.url}
-                layout="fill"
                 alt={image.fileName}
             />
         </div>

@@ -77,16 +77,15 @@ export default function ProjectHero(data) {
 
 function Links(props) {
     return (
-        <Link href={props?.href}>
-            <a
-                id="interactable"
-                data-type="new-window"
-                className='text-lg after:content-["_↗"]'
-                target="_blank"
-                rel="noopener nofollow"
-            >
-                {props?.name}
-            </a>
+        <Link
+            href={props?.href}
+            id="interactable"
+            data-type="new-window"
+            className='text-lg after:content-["_↗"]'
+            target="_blank"
+            rel="noopener nofollow"
+        >
+            {props?.name}
         </Link>
     )
 }
