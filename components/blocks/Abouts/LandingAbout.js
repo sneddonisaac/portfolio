@@ -22,7 +22,7 @@ export default function LandingAbout({ data }) {
                         whileInView={{ translateX: '-100%' }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <ImageWithCaption data={data?.image} />
+                        <ImageWithCaption data={data?.image} className="" />
                     </motion.div>
                 )}
             </div>

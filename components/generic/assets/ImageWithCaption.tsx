@@ -1,5 +1,6 @@
 import { ImageTypes } from '../../../types/ImageTypes'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 type Props = {
     className?: string
@@ -10,7 +11,7 @@ export default function ImageWithCaption({ data, className }: Props) {
     return (
         <div className="relative h-full w-full overflow-hidden">
             <Image
-                className={`${className} ${data.caption && 'pb-6'}`}
+                className={clsx(className, data.caption && 'pb-6')}
                 src={data.url}
                 alt={data.alt}
                 width={data.width}
