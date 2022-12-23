@@ -95,6 +95,25 @@ html {
     animation: fadeOut 350ms ease-in;
 }
 
+.carousel {
+    overflow: hidden;
+}
+
+.inner {
+    height: 100%;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: green;
+    color: #fff;
+}
+
 @layer utilities {
     .masonry-grid {
         display: -webkit-box; /* Not needed if autoprefixing */
