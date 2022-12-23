@@ -26,8 +26,8 @@ function WorkItem({ title, description, projectTags, slug }) {
     return (
         <div className="relative z-0 flex h-full w-full items-end justify-center bg-black bg-opacity-10 dark:bg-white dark:bg-opacity-10 sm:h-5/6 sm:justify-start lg:w-4/5">
             <div className="mb-20 flex h-full w-full flex-col items-start justify-end px-4 sm:ml-12 sm:mb-12 sm:w-4/5 md:w-1/2">
-                <span className="pb-4 text-4xl font-bold">{title}</span>
-                <span className="pb-4">{description}</span>
+                <h1 className="pb-4 text-4xl font-bold">{title}</h1>
+                <h2 className="pb-4">{description}</h2>
                 <div className="flex w-full items-center justify-between font-bold tracking-wider">
                     <div>
                         {projectTags?.map((tag, i) => (
@@ -40,6 +40,7 @@ function WorkItem({ title, description, projectTags, slug }) {
                         href={`/work/${slug}`}
                         data-type="link"
                         className="interactable group hidden whitespace-nowrap font-bold lg:block"
+                        aria-label="Featured project"
                     >
                         Learn More
                         <div className="group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white" />
@@ -51,6 +52,7 @@ function WorkItem({ title, description, projectTags, slug }) {
                     href={`/work/${slug}`}
                     data-type="link"
                     className="interactable group font-bold sm:hidden"
+                    aria-label="Featured project"
                 >
                     Learn More
                     <div className="group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white" />

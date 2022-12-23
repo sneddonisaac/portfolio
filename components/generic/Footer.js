@@ -20,11 +20,11 @@ export default function Footer() {
                 <div className="grid w-full gap-x-4 gap-y-8 md:grid-cols-5 lg:grid-cols-6">
                     <div className="col-span-2 grid grid-flow-col grid-rows-1">
                         <div className="text-center sm:text-left">
-                            <h1 className="text-sm text-gray-500">Version</h1>
+                            <h1 className="text-sm text-gray-400">Version</h1>
                             <span>{year} &copy; Edition</span>
                         </div>
                         <div className="text-center sm:text-left">
-                            <h1 className="text-sm text-gray-500">
+                            <h1 className="text-sm text-gray-400">
                                 Local Time
                             </h1>
                             <div className="flex justify-center sm:justify-start">
@@ -37,7 +37,7 @@ export default function Footer() {
                     </div>
                     <div className="hidden sm:block md:col-span-1 lg:col-span-2" />
                     <div className="col-span-2 text-center sm:text-left">
-                        <h1 className="text-sm text-gray-500">Socials</h1>
+                        <h1 className="text-sm text-gray-400">Socials</h1>
                         <div className="grid grid-flow-col grid-rows-1 place-items-center gap-x-8 sm:place-items-start">
                             {socials.map((social, index) => (
                                 <Link
@@ -48,7 +48,7 @@ export default function Footer() {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    <h4>{social.name}</h4>
+                                    <h2>{social.name}</h2>
                                     <div className="group-hover:underscore-hover h-[2px] w-0 bg-white" />
                                 </Link>
                             ))}

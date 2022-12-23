@@ -40,6 +40,7 @@ export default function ThemeSelector() {
 
     return (
         <button
+            aria-label="theme selector"
             data-type="switch"
             onClick={() => setTheme(theme !== 'light' ? 'light' : 'dark')}
             className="interactable group flex aspect-square h-11 w-11 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white sm:bottom-8 sm:right-8"
