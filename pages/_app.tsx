@@ -42,12 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Script>
             {/* default seo settings */}
             <DefaultSeo {...SEO} />
-            <DevSupport
-                ComponentPreviews={ComponentPreviews}
-                useInitialHook={useInitial}
-            >
                 <Component {...pageProps} />
-            </DevSupport>
         </ThemeProvider>
     )
 }
