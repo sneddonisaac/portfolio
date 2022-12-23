@@ -60,7 +60,7 @@ export default function Cursor() {
         }
 
         window.onmousemove = (e) => {
-            const interactable = e.target.closest('#interactable'),
+            const interactable = e.target.closest('.interactable'),
                 interacting = interactable !== null
 
             animateTrailer(e, interacting)

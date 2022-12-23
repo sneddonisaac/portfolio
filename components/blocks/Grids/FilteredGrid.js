@@ -68,10 +68,9 @@ function Card({ item, index, type }) {
         >
             <Link
                 href={`/${type}/${item?.slug}`}
-                id="interactable"
                 data-type="link"
                 className={clsx(
-                    'flex h-fit w-full flex-col',
+                    'interactable flex h-fit w-full flex-col',
                     !item?.projectImage
                         ? 'items-end justify-end'
                         : 'items-center justify-center'

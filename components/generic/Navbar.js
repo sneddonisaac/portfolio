@@ -30,9 +30,8 @@ function MenuBar() {
                 <Link
                     key={index}
                     href={item.path}
-                    id="interactable"
                     datatype="link"
-                    className={`cursor-pointer uppercase decoration-2 underline-offset-4 ${
+                    className={`interactable cursor-pointer uppercase decoration-2 underline-offset-4 ${
                         `/${router.pathname.split('/')[1]}` === item.path
                             ? 'underline'
                             : ''

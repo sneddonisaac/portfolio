@@ -17,19 +17,17 @@ export default function MainCTA() {
                         <div className="flex flex-col items-center justify-center whitespace-nowrap sm:flex-row">
                             <Link
                                 href="mailto:hello@isaacsneddonjenkins.co.uk"
-                                id="interactable"
                                 data-type="link"
-                                className="cursor-pointer border border-2 border-white py-4 px-6 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black sm:mr-6"
+                                className="interactable cursor-pointer border border-2 border-white py-4 px-6 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black sm:mr-6"
                             >
                                 Email Me
                             </Link>
                             <Link
                                 href="https://www.buymeacoffee.com/sneddonisaac"
-                                id="interactable"
                                 data-type="link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-4 cursor-pointer border border-2 border-white bg-white py-4 px-6 text-black transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white sm:mt-0"
+                                className="interactable mt-4 cursor-pointer border border-2 border-white bg-white py-4 px-6 text-black transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white sm:mt-0"
                             >
                                 Buy Me A Coffee
                             </Link>

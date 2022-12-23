@@ -35,7 +35,7 @@ export default function MasonryImageGrid(props) {
                                     alt={image.alt}
                                     width={image.width}
                                     height={image.height}
-                                    id="interactable"
+                                    className="interactable"
                                     data-type="image"
                                 />
                                 {image.title && (

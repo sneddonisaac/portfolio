@@ -79,9 +79,8 @@ function Links(props) {
     return (
         <Link
             href={props?.href}
-            id="interactable"
             data-type="new-window"
-            className='text-lg after:content-["_↗"]'
+            className='interactable text-lg after:content-["_↗"]'
             target="_blank"
             rel="noopener nofollow"
         >

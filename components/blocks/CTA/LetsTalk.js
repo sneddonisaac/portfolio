@@ -14,9 +14,8 @@ export default function LetsTalk() {
                         me over a message, and{' '}
                         <Link
                             href="/lets-chat"
-                            id="interactable"
                             data-type="link"
-                            className="decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
+                            className="interactable decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
                         >
                             let&apos;s chat.
                         </Link>

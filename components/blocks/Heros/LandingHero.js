@@ -38,9 +38,8 @@ function WorkItem({ title, description, projectTags, slug }) {
                     </div>
                     <Link
                         href={`/work/${slug}`}
-                        id="interactable"
                         data-type="link"
-                        className="group hidden whitespace-nowrap font-satoshi-bold lg:block"
+                        className="interactable group hidden whitespace-nowrap font-satoshi-bold lg:block"
                     >
                         Learn More
                         <div className="group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white" />
@@ -50,9 +49,8 @@ function WorkItem({ title, description, projectTags, slug }) {
             <div className="absolute right-5 bottom-5 flex flex-col items-end justify-end">
                 <Link
                     href={`/work/${slug}`}
-                    id="interactable"
                     data-type="link"
-                    className="group font-satoshi-bold sm:hidden"
+                    className="interactable group font-satoshi-bold sm:hidden"
                 >
                     Learn More
                     <div className="group-hover:underscore-hover h-[2px] w-0 bg-black dark:bg-white" />

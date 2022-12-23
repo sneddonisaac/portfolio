@@ -29,9 +29,8 @@ export default function ErrorPage() {
                 It looks like you are lost,{' '}
                 <Link
                     href="/"
-                    id="interactable"
                     data-type="home"
-                    className="decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
+                    className="interactable decoration-3 underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-orange-600 hover:decoration-orange-600"
                 >
                     let&apos;s get you back.
                 </Link>

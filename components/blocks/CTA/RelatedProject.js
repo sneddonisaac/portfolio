@@ -12,7 +12,7 @@ export default function RelatedProject({ data, type }) {
             <Link
                 href={`/${type}/${data?.slug}`}
                 rel="preload"
-                id="interactable"
+                className="interactable"
                 data-type="next"
             >
                 <NoiseBG classNames="text-white">

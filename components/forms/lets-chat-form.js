@@ -83,12 +83,11 @@ export default function LetsChatForm() {
                 />
             </InputWLabel>
             <button
-                id="interactable"
                 data-type="submit"
                 onClick={() => {
                     setCreated(new Date())
                 }}
-                className="float-right border border-2 border-black bg-black py-3 px-6 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black dark:border-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white"
+                className="interactable float-right border border-2 border-black bg-black py-3 px-6 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black dark:border-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white"
             >
                 Submit
             </button>

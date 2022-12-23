@@ -40,10 +40,9 @@ export default function ThemeSelector() {
 
     return (
         <button
-            id="interactable"
             data-type="switch"
             onClick={() => setTheme(theme !== 'light' ? 'light' : 'dark')}
-            className="group flex aspect-square h-11 w-11 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white sm:bottom-8 sm:right-8"
+            className="interactable group flex aspect-square h-11 w-11 items-center justify-center rounded-md bg-black p-2 text-white shadow-2xl dark:bg-white sm:bottom-8 sm:right-8"
         >
             <div className="flex items-center justify-center text-white dark:text-black">
                 {theme !== 'light' ? <SunIcon /> : <MoonIcon />}
