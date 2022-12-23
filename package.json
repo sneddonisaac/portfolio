@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "PORT=5002 next start",
     "lint": "next lint",
     "prettier": "npx prettier --write ."
   },
