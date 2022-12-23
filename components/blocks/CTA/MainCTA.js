@@ -11,7 +11,7 @@ export default function MainCTA() {
             >
                 <Container>
                     <div className="z-10 flex w-full flex-col items-center justify-center sm:flex-row sm:justify-around">
-                        <span className="mb-6 font-satoshi-bold text-5xl sm:mb-0">
+                        <span className="mb-6 text-5xl font-bold sm:mb-0">
                             Get in touch.
                         </span>
                         <div className="flex flex-col items-center justify-center whitespace-nowrap sm:flex-row">

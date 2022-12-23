@@ -8,7 +8,7 @@ export default function ProjectHero(data) {
         <div id={`block_name: ProjectHero, block_id: ${data?.id}`}>
             <Container>
                 <div className="flex w-full flex-col items-center justify-start px-12 pt-36 sm:pb-12 sm:pt-24">
-                    <span className="my-12 flex flex-col items-center justify-center text-center font-satoshi-bold text-7xl sm:text-8xl">
+                    <span className="my-12 flex flex-col items-center justify-center text-center text-7xl font-bold sm:text-8xl">
                         {data?.title}
                         {!data?.projectImage?.url && (
                             <span className="mt-6 text-base">

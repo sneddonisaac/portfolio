@@ -10,13 +10,13 @@ export default function Simple5050(data) {
                 >
                     <h1
                         id="heading"
-                        className="row-span-1 font-satoshi-medium text-6xl leading-snug"
+                        className="row-span-1 text-6xl font-medium leading-snug"
                     >
                         {data?.SimpleHeading}
                     </h1>
                     <p
                         id="paragraph"
-                        className=" row-span-2 pt-8 font-satoshi-medium text-lg md:pt-0"
+                        className=" row-span-2 pt-8 text-lg font-medium md:pt-0"
                     >
                         {data?.paragraph}
                     </p>

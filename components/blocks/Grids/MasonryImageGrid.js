@@ -16,9 +16,7 @@ export default function MasonryImageGrid(props) {
         <Container>
             {props.title && (
                 <div className={'py-12 text-center md:text-left'}>
-                    <h1 className={'font-satoshi-medium text-6xl'}>
-                        {props.title}
-                    </h1>
+                    <h1 className={'text-6xl font-medium'}>{props.title}</h1>
                 </div>
             )}
             <Masonry
@@ -41,7 +39,7 @@ export default function MasonryImageGrid(props) {
                                 {image.title && (
                                     <div
                                         className={
-                                            'absolute inset-0 flex items-center justify-center font-satoshi-bold text-3xl'
+                                            'absolute inset-0 flex items-center justify-center text-3xl font-bold'
                                         }
                                     >
                                         <h1 className={' bg-black py-3 px-4 '}>

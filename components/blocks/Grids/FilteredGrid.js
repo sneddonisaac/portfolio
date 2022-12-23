@@ -136,12 +136,12 @@ function Header({ props, projects, value, setValue, title }) {
     return (
         <header className="flex flex-col items-start justify-between pt-36 sm:flex-row sm:items-end">
             <div className="relative w-min">
-                <h1 className="block font-satoshi-bold text-8xl">{title}</h1>
+                <h1 className="block text-8xl font-bold">{title}</h1>
                 <span className="absolute top-0 -right-3 text-lg">
                     {projects.length}
                 </span>
             </div>
-            <div className="w-full space-y-2 py-4 font-satoshi-bold sm:w-fit">
+            <div className="w-full space-y-2 py-4 font-bold sm:w-fit">
                 <select
                     className="w-full bg-white text-left text-black dark:bg-black dark:text-white sm:w-fit"
                     value={value}

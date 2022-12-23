@@ -18,7 +18,7 @@ export default function NoisyGradient5050Bordered(props) {
                     <div className="z-10 grid h-fit auto-rows-[_0.5fr] place-content-center gap-16 py-12 px-16 text-center text-white text-white sm:grid-cols-3 sm:text-left">
                         <h1
                             className={clsx(
-                                'col-span-2 h-fit font-satoshi-bold text-4xl sm:text-6xl',
+                                'col-span-2 h-fit text-4xl font-bold sm:text-6xl',
                                 !props.paragraph && 'col-span-3'
                             )}
                         >

@@ -6,7 +6,7 @@ export default function LetsTalk() {
         <div id="Let's Talk CTA" className="my-16 h-fit w-full">
             <Container classname="justify-center items-center flex">
                 <div className="flex w-full flex-col items-center justify-center text-center sm:w-3/4">
-                    <h1 className="mb-10 font-satoshi-bold text-4xl sm:text-6xl">
+                    <h1 className="mb-10 text-4xl font-bold sm:text-6xl">
                         I occasionally take on freelance opportunities.
                     </h1>
                     <p className="w-full text-center sm:w-3/4 sm:text-xl">

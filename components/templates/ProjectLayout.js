@@ -11,7 +11,7 @@ export default function ProjectLayout({ children, data, type }) {
             {data?.seo && <SEO {...data.seo} />}
             <div
                 id="layout"
-                className="relative h-full min-h-screen font-satoshi-regular"
+                className="font-regular relative h-full min-h-screen"
             >
                 <Header />
                 <main className="relative min-h-[90vh]">

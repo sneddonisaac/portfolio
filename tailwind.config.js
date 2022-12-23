@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: [
@@ -9,9 +10,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'satoshi-regular': "'Satoshi Regular', sans-serif",
-                'satoshi-medium': "'Satoshi Medium', sans-serif",
-                'satoshi-bold': "'Satoshi Bold', sans-serif",
+                sans: ['var(--satoshi)', ...fontFamily.sans],
             },
             colors: {
                 black: '#28292e',

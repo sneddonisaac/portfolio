@@ -7,7 +7,7 @@ import Cursor from '../generic/Cursor'
 
 export default function BasicLayout({ children, title, desc, cta = true }) {
     return (
-        <div id="layout" className="relative font-satoshi-regular">
+        <div id="layout" className="relative font-sans">
             <Meta title={title} desc={desc} />
             <Header />
             <main className="relative">{children}</main>

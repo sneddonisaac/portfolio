@@ -20,7 +20,7 @@ export default function RelatedProject({ data, type }) {
                         <div className="group flex flex-col items-center justify-center space-y-12 py-12">
                             <div className="text-center">
                                 <span>{data?.client}</span>
-                                <h1 className="font-satoshi-bold text-6xl">
+                                <h1 className="text-6xl font-bold">
                                     {data?.title}
                                 </h1>
                             </div>

@@ -5,6 +5,12 @@ import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import { DefaultSeo } from 'next-seo'
 import { SEO } from 'seo.config'
+import font from '@next/font/local'
+
+const satoshi = font({
+    src: './Satoshi-Variable.woff2',
+    variable: '--satoshi',
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -42,7 +48,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Script>
             {/* default seo settings */}
             <DefaultSeo {...SEO} />
-            <Component {...pageProps} />
+            <main className={`${satoshi.variable} font-sans`}>
+                <Component {...pageProps} />
+            </main>
         </ThemeProvider>
     )
 }

@@ -9,7 +9,7 @@ export default function LetsChat() {
                 <p className="text-xl">
                     Got an exciting idea, or a new project you are working on?
                 </p>
-                <h1 className="mb-10 mt-6 font-satoshi-bold text-6xl">
+                <h1 className="mb-10 mt-6 text-6xl font-bold">
                     Let&apos;s Chat.
                 </h1>
                 <LetsChatForm />

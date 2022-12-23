@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <div
             id="Navbar"
-            className="fixed inset-x-0 bottom-5 z-[130] mx-auto flex h-fit w-full justify-around bg-transparent font-satoshi-regular sm:bottom-16 sm:justify-between sm:px-16"
+            className="fixed inset-x-0 bottom-5 z-[130] mx-auto flex h-fit w-full justify-around bg-transparent sm:bottom-16 sm:justify-between sm:px-16"
         >
             <div className="hidden w-11 sm:flex" />
             <MenuBar />
