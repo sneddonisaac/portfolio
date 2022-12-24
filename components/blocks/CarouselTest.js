@@ -8,9 +8,16 @@ const data = [
 
 export default function CarouselTest() {
     return (
-        <Carousel className="mx-auto h-screen w-1/2 py-12">
+        <Carousel
+            containerClasses="mx-auto h-screen w-2/3 py-24"
+            navigation={false}
+        >
             {data.map((item, index) => (
-                <CarouselItem key={index}>{item.title}</CarouselItem>
+                <CarouselItem key={index} className="text-black">
+                    <div className="m-2 h-full w-full bg-white text-center">
+                        {item.title}
+                    </div>
+                </CarouselItem>
             ))}
         </Carousel>
     )

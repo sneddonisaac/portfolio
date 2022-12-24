@@ -1,10 +1,22 @@
 import BasicLayout from '../components/templates/BasicLayout'
-import CarouselTest from '../components/blocks/CarouselTest'
+import CarouselHero from '../components/blocks/Heros/CarouselHero'
+import { getFeaturedWork, getLandingPage } from '../lib/cms'
 
-export default function Test() {
+export default function Test({ works }) {
     return (
         <BasicLayout title="Test">
-            <CarouselTest />
+            <CarouselHero {...works} />
         </BasicLayout>
     )
+}
+
+export async function getStaticProps() {
+    const page = await getLandingPage()
+    const works = await getFeaturedWork()
+    return {
+        props: {
+            page,
+            works,
+        },
+    }
 }
