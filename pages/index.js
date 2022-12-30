@@ -5,6 +5,7 @@ import { getFeaturedWork, getLandingPage } from '@/lib/cms'
 import BasicLayout from '@/components/templates/BasicLayout'
 import LandingHero from '@/components/blocks/Heros/LandingHero'
 import Components from '@/utils/page-sections/landing-page'
+import CardHoverHero from '../components/blocks/Heros/CardHoverHero'
 
 export async function getStaticProps() {
     const page = await getLandingPage()
@@ -20,7 +21,7 @@ export async function getStaticProps() {
 export default function Home({ page, works }) {
     return (
         <BasicLayout title={page.title}>
-            <LandingHero data={works[0]} />
+            <CardHoverHero {...works} />
             {page?.content?.map((component, index) => (
                 <Components data={component} key={index} />
             ))}

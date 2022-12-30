@@ -10,7 +10,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--satoshi)', ...fontFamily.sans],
+                sans: ['Satoshi', ...fontFamily.sans],
+                serif: ['Cabinet', ...fontFamily.sans],
             },
             colors: {
                 black: '#28292e',

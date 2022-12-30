@@ -14,6 +14,20 @@ html {
     overflow-x: hidden;
 }
 
+.image {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    z-index: 130;
+}
+
+.heading1:hover > .image:hover, .heading2:hover > .image:hover {
+    opacity: 0;
+}
+
+.heading1:hover > .image, .heading2:hover > .image {
+    opacity: 1;
+}
+
 #cursor {
     height: 20px;
     width: 20px;
@@ -336,5 +350,56 @@ html {
         90% {
             background-position: -10% 10%;
         }
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: "Cabinet";
+        font-weight: 400;
+        src: url("/fonts/CabinetGrotesk-Regular.woff") format("woff"),
+        url("/fonts/CabinetGrotesk-Regular.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Cabinet";
+        font-weight: 200;
+        src: url("/fonts/CabinetGrotesk-Light.woff") format("woff"),
+        url("/fonts/CabinetGrotesk-Light.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Cabinet";
+        font-weight: 800;
+        src: url("/fonts/CabinetGrotesk-Bold.woff") format("woff"),
+        url("/fonts/CabinetGrotesk-Bold.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Cabinet";
+        font-weight: 600;
+        src: url("/fonts/CabinetGrotesk-Medium.woff") format("woff"),
+        url("/fonts/CabinetGrotesk-Medium.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Satoshi";
+        font-weight: 400;
+        src: url("/fonts/Satoshi-Regular.woff") format("woff"),
+        url("/fonts/Satoshi-Regular.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Satoshi";
+        font-weight: 200;
+        src: url("/fonts/Satoshi-Light.woff") format("woff"),
+        url("/fonts/Satoshi-Light.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Satoshi";
+        font-weight: 800;
+        src: url("/fonts/Satoshi-Bold.woff") format("woff"),
+        url("/fonts/Satoshi-Bold.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Satoshi";
+        font-weight: 600;
+        src: url("/fonts/Satoshi-Medium.woff") format("woff"),
+        url("/fonts/Satoshi-Medium.woff2") format("woff2");
     }
 }
