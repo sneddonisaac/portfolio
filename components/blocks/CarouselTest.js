@@ -1,4 +1,4 @@
-import { Carousel, CarouselItem } from '../generic/Carousel'
+import { Carousel, CarouselItem } from '../generic/carousel'
 
 const data = [
     { id: 1, title: 'Item 1' },

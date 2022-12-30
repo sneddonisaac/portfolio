@@ -107,7 +107,7 @@ html {
 .inner {
     height: 100%;
     white-space: nowrap;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s cubic-bezier(.07,.23,.34,1);
 }
 
 .carousel-item {
@@ -132,6 +132,12 @@ html {
     bottom: 0;
 }
 
+.indicators[data-position="bottom-internal"] {
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
 .indicators[data-position="center"] {
     justify-content: center;
 }
@@ -141,6 +147,32 @@ html {
     border-radius: 100%;
     background: var(--black);
     padding: 0.25rem;
+}
+
+.indicators[data-position="single"] {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.progress-ring {
+
+}
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.indicators[data-position="single"] > button {
+
+    border-radius: 50px;
+    background: var(--black);
+    padding: 0.5rem 1rem;
 }
 
 .indicators[data-position="middle"][data-type="text"] > button {
