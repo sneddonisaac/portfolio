@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { ArrowDownIcon } from '@radix-ui/react-icons'
 
 export default function CardHoverHero(props) {
-    console.log(Object.values(props)[0].projectImage.url)
     return (
         <div
             id="card-hover-hero"
@@ -17,7 +16,7 @@ export default function CardHoverHero(props) {
                         href="/lets-chat"
                         className="font-serif text-xl font-bold md:text-2xl"
                     >
-                        /// Let&apos;s Chat
+                        &#47;&#47;&#47; Let&apos;s Chat
                     </Link>
                 </div>
                 <div id="heading">
