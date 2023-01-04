@@ -3,7 +3,7 @@
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self';
-  child-src example.com;
+  child-src isaacsneddonjenkins.co.uk;
   style-src 'self' isaacsneddonjenkins.co.uk;
   font-src 'self';  
 `
