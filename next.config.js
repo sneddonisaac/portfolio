@@ -1,13 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self';
-  child-src isaacsneddonjenkins.co.uk;
-  style-src 'self' isaacsneddonjenkins.co.uk;
-  font-src 'self';  
-`
-
 const securityHeaders = [
     {
         key: 'X-DNS-Prefetch-Control',
@@ -20,10 +12,6 @@ const securityHeaders = [
     {
         key: 'X-Frame-Options',
         value: 'SAMEORIGIN',
-    },
-    {
-        key: 'Content-Security-Policy',
-        value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
     },
 ]
 
