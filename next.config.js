@@ -24,12 +24,4 @@ module.exports = {
         locales: ['en'],
         defaultLocale: 'en',
     },
-    async headers() {
-        return [
-            {
-                source: '/:path*',
-                headers: securityHeaders,
-            },
-        ]
-    },
 }
