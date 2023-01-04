@@ -25,7 +25,12 @@ export default function CardHoverHero(props) {
                             Creative
                             <Image
                                 src={Object.values(props)[0].projectImage.url}
-                                alt={Object.values(props)[0].projectImage.alt}
+                                role="presentation"
+                                alt={
+                                    Object.values(props)[0].projectImage.alt ||
+                                    ''
+                                }
+                                priority
                                 className="image absolute right-6 top-10 h-auto w-96 shadow-md md:top-32 md:right-12 md:w-[30rem]"
                                 width={
                                     Object.values(props)[0].projectImage.width
@@ -39,7 +44,12 @@ export default function CardHoverHero(props) {
                             Developer
                             <Image
                                 src={Object.values(props)[1].projectImage.url}
-                                alt={Object.values(props)[1].projectImage.alt}
+                                alt={
+                                    Object.values(props)[1].projectImage.alt ||
+                                    ''
+                                }
+                                role="presentation"
+                                priority
                                 className="image absolute bottom-8 left-12 h-auto w-96 shadow-md"
                                 width={
                                     Object.values(props)[1].projectImage.width
@@ -53,7 +63,7 @@ export default function CardHoverHero(props) {
                 </div>
                 <div className="absolute right-10 bottom-24 flex space-x-8 md:right-32">
                     <div className="flex h-16 flex-col justify-center text-xl">
-                        <h3>Based in Cotswolds</h3>
+                        <h2>Based in Cotswolds</h2>
                         <h3>United Kingdom</h3>
                     </div>
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-black bg-opacity-20">
